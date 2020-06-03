@@ -1,4 +1,10 @@
 - name: Home
   link: /
+- name: Notebook
+  link: /notebook
+- name: Projects
+  link: /projects
+- name: Publications
+  link: /publications
 - name: About
   link: /about

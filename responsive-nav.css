@@ -1,0 +1,271 @@
+/*! responsive-nav.js 1.0.39 by @viljamis */
+  .nav-collapse  {
+    margin-bottom: 5px;
+  }
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #4A90E2;
+  border-top: 1px solid #4A90E2;
+}
+
+#newtoggle {
+  float:right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.nav-collapse li {
+  background: white;
+  font-family: Kreon;
+}
+
+.nav-collapse a {
+  display:block;
+  padding:.5em 1em;
+  width:100%;
+  opacity: 0.8;
+background: #4A90E2;
+color: #FFFFFF;
+}
+
+.nav-collapse a:hover {
+  display:block;
+  padding:.5em 1em;
+  width:100%;
+  opacity: 0.6;
+      transition: opacity .4s ease-out;
+      -moz-transition: opacity .4s ease-out;
+      -webkit-transition: opacity .4s ease-out;
+      -o-transition: opacity .4s ease-out;
+background: #4A90E2;
+color: #FFFFFF;
+
+}
+
+.nav-collapse a:active {
+  opacity: 1.0;
+      transition: opacity .4s ease-out;
+      -moz-transition: opacity .4s ease-out;
+      -webkit-transition: opacity .4s ease-out;
+      -o-transition: opacity .4s ease-out;
+
+}
+
+
+
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  float:right;
+  -webkit-tap-highlight-color: rgba(,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+  .page-logos {
+    padding-top: 10px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+
+
+
+  #logo_nav svg {
+width:50px;
+height:50px;
+}
+
+    #logo_nav {
+    display:inline-block;
+  }
+
+    #logo_nav:hover {
+      opacity:0.5;
+      transition: opacity .2s ease-out;
+      -moz-transition: opacity .2s ease-out;
+      -webkit-transition: opacity .2s ease-out;
+      -o-transition: opacity .2s ease-out;
+    }
+
+
+
+
+@media screen and (min-width: 40em) {
+
+    .page-logos {
+    padding-top: 10px;
+    margin-left: 1.5em;
+  }
+
+  #newtoggle {
+    display: none;
+  }
+
+  .nav-collapse  {
+    float:right;
+
+  }
+  .nav-collapse ul {
+    float:right;
+    margin-right: 1.5em;
+    margin-top: 1em;
+     border-bottom: none;
+    border-top: 1px none;
+  }
+
+  #logo_nav
+  {
+    float:left
+
+  }
+
+  #logo_nav svg {
+width:50px;
+height:50px;
+}
+
+  .nav-collapse li {
+    background: none;
+    margin:0 3px;
+    padding: 2px;
+    float: left;
+
+  }
+
+  .nav-collapse a {
+  padding:0em 0em;
+    opacity: 1;
+background: none;
+color: #4A90E2;
+}
+
+
+.nav-collapse a:hover {
+opacity: 0.5;
+color: #4A90E2;
+background: none;
+text-decoration: none;
+padding:0em 0em;
+}
+
+.nav-collapse a:active {
+opacity: 0.5;
+background: none;
+text-decoration: none;
+padding:0em 0em;
+}
+
+.nav-collapse a:visited {
+color: #4A90E2;
+opacity: 0.5;
+background: none;
+text-decoration: none;
+padding:0em 0em;
+}
+
+  .js .nav-collapse {
+    position: relative;
+
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #FFFFFF;
+  background: #4A90E2;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #4A4A4A;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 1200px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(66, 170, 250, 0.2);
+  border-bottom: 1px solid rgba(66, 170, 250, 0.45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}

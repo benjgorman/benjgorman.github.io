@@ -1,3 +1,386 @@
 ---
 ---
 @import 'bootstrap/bootstrap';
+
+* {
+  margin: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name:
+  Author:
+
+  Stylesheet: Desktop Stylsheet
+
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+
+  ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1030up.scss */
+  .wrap {
+    width: 760px;
+  }
+
+  /* line 16, ../scss/breakpoints/_1030up.scss */
+  .wrap_nav {
+    width: 760px;
+  }
+}
+
+.container {
+  width: auto;
+  max-width: 760px;
+  padding: 0 15px;
+}
+
+#content {
+  margin-top: 3.5em;
+}
+
+.header {
+  border-top: 6px solid #4A90E2;
+}
+
+/* line 1599, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0em;
+}
+/* line 1602, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
+}
+
+.avatar {
+  float: right;
+  width: 30%;
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+}
+
+/* end .hentry */
+/* line 1719, ../scss/breakpoints/_base.scss */
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+
+/*********************
+LINK STYLES
+*********************/
+/* line 1481, ../scss/breakpoints/_base.scss */
+social_list {
+  float: left;
+}
+
+/* line 1485, ../scss/breakpoints/_base.scss */
+a:link {
+  font-family: Kreon;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+/* line 1494, ../scss/breakpoints/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 1497, ../scss/breakpoints/_base.scss */
+a:focus {
+  text-shadow: 0 0 2px #999;
+}
+
+/* line 1500, ../scss/breakpoints/_base.scss */
+a:active {
+  text-shadow: 0 0 2px #999;
+  padding-top: 2px;
+}
+
+/* line 1504, ../scss/breakpoints/_base.scss */
+a, a:visited {
+  color: #4A90E2;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+/* line 1508, ../scss/breakpoints/_base.scss */
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #2378db;
+}
+/* line 1518, ../scss/breakpoints/_base.scss */
+a:link, a:visited:link {
+  /*
+  this highlights links on iPhones/iPads.
+  so it basically works like the :hover selector
+  for mobile devices.
+  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+/* line 1532, ../scss/breakpoints/_base.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */
+}
+/* line 1542, ../scss/breakpoints/_base.scss */
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  text-decoration: none;
+}
+
+/* line 1547, ../scss/breakpoints/_base.scss */
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+/* line 1552, ../scss/breakpoints/_base.scss */
+h2, .h2 {
+  font-family: Kreon;
+  font-size: 24px;
+  color: #4A4A4A;
+  line-height: 30px;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+}
+
+/* line 1561, ../scss/breakpoints/_base.scss */
+h3, .h3 {
+  font-family: Kreon;
+  font-size: 18px;
+  color: #4A90E2;
+  line-height: 21px;
+  padding-bottom: 1em;
+}
+
+/* line 1569, ../scss/breakpoints/_base.scss */
+h4, .h4 {
+  font-family: Kreon;
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 21px;
+}
+
+/* line 1576, ../scss/breakpoints/_base.scss */
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 1583, ../scss/breakpoints/_base.scss */
+.post-date {
+  font-family: Kreon;
+  font-weight: 700;
+  font-size: 16px;
+  color: #4A90E2;
+  line-height: 15px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 1595, ../scss/breakpoints/_base.scss */
+.header {
+  border-top: 6px solid #4A90E2;
+}
+
+.icon-bg {
+  display: block;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  background: url(/grunt/svgs/bg.svg);
+  background-size: 50px 50px;
+}
+
+/* line 1599, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0em;
+}
+/* line 1602, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+/* line 1619, ../scss/breakpoints/_base.scss */
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 1623, ../scss/breakpoints/_base.scss */
+.nav li {
+  /*
+  so you really have to rethink your dropdowns for mobile.
+  you don't want to have it expand too much because the
+  screen is so small. How you manage your menu should
+  depend on the project. Here's some great info on it:
+  http://www.alistapart.com/articles/organizing-mobile/
+  */
+}
+/* line 1625, ../scss/breakpoints/_base.scss */
+.nav li a {
+  display: block;
+  color: #2980b9;
+  text-decoration: none;
+  padding: 0.75em;
+  /*
+  remember this is for mobile ONLY, so there's no need
+  to even declare hover styles here, you can do it in
+  the style.scss file where it's relevant. We want to
+  keep this file as small as possible!
+  */
+}
+/* line 1658, ../scss/breakpoints/_base.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+}
+
+/* end .nav */
+
+/* line 1727, ../scss/breakpoints/_base.scss */
+.page-title {
+  font-family: Kreon;
+  font-size: 24px;
+  color: #4A4A4A;
+  line-height: 35px;
+  font-weight: 700;
+}
+
+/* line 1735, ../scss/breakpoints/_base.scss */
+.post-title {
+  font-family: Kreon;
+  font-size: 28px;
+  color: #4A4A4A;
+  line-height: 35px;
+  font-weight: 700;
+}
+
+/* line 1743, ../scss/breakpoints/_base.scss */
+.headline {
+  font-family: Kreon;
+  font-weight: 400;
+  font-size: 28px;
+  color: #4A4A4A;
+  line-height: 35px;
+}
+
+/* want to style individual post classes? Booya! */
+/* post by id (i.e. post-3) */
+/* general post style */
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+/* line 1766, ../scss/breakpoints/_base.scss */
+.byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 180px; /* Margin bottom by footer height */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  text-align: center;
+  color: #f8f9fa;
+  background-color: #EEE;
+}
+
+/* line 2331, ../scss/breakpoints/_base.scss */
+#footer ul {
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+  list-style: none;
+  line-height: normal;
+  text-align: center;
+}
+
+/* line 2338, ../scss/breakpoints/_base.scss */
+#footer li {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline;
+  list-style-type: none;
+  vertical-align: middle;
+}
+
+/* line 2346, ../scss/breakpoints/_base.scss */
+#footer li a svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* line 2352, ../scss/breakpoints/_base.scss */
+#footer a {
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.copyright {
+  font-size: 12px;
+  font-family: Kreon;
+  font-weight: 400;
+  color: #4A4A4A;
+  padding: 10px;
+}
+
+/* line 89, ../scss/breakpoints/_base.scss */
+.copyright a:link {
+  font-size: 12px;
+  font-family: Kreon;
+  font-weight: 400;
+  color: #4A90E2;
+}

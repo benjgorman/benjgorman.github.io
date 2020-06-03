@@ -2204,6 +2204,8 @@ and more scalable.
 /* line 1766, ../scss/breakpoints/_base.scss */
 .byline { color: #9fa6b4; font-style: italic; margin: 0; }
 
+.entry-content p { margin: 0 0 1.5em; }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html { position: relative; min-height: 100%; }
@@ -2228,5 +2230,13 @@ body { margin-bottom: 180px; /* Margin bottom by footer height */ }
 
 /* line 89, ../scss/breakpoints/_base.scss */
 .copyright a:link { font-size: 14px; font-family: Kreon; color: #4A90E2; }
+
+.page-article { padding-bottom: 4em; }
+
+.card-header-h2 { font-family: Kreon; font-size: 24px; color: #4A4A4A; line-height: 30px; padding-top: 0.5em; padding-bottom: 0.5em; }
+
+.card-link { font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; color: #FFFFFF; }
+
+.card-header { display: block; padding: 0em; text-align: center; background: #4A90E2; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; }
 
 /*# sourceMappingURL=main.css.map */

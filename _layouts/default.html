@@ -8,7 +8,17 @@
   </head>
   <body>
     {% include navbar.html %}
-    {{ content}}
-    {% include footer.html %} 
-  </body>
+    <div id="content" class="container">
+      <div id="inner-content" class="wrap cf">
+          <div id="main" role="main">
+            {{ content}}
+            <div class="push"></div>
+            </div>
+          </div>
+      </div>
+      {% include footer.html %}
+    </body>
+  <script>
+  	var nav = responsiveNav(".nav-collapse");
+  </script>
 </html>

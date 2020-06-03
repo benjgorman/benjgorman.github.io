@@ -2060,13 +2060,18 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 p { margin-top: 0; margin-bottom: 0; }
 
-@media only screen and (min-width: 1030px) { /****************************************************************** Site Name: Author: Stylesheet: Desktop Stylsheet This is the desktop size. It's larger than an iPad so it will only be seen on the Desktop. */ /* line 12, ../scss/breakpoints/_1030up.scss */ .wrap { width: 760px; } /* line 16, ../scss/breakpoints/_1030up.scss */ .wrap_nav { width: 760px; } }
+.wrap_nav { margin: 0 auto; }
+
+/* line 1471, ../scss/breakpoints/_base.scss */
+.wrap { width: 100%; margin: 0 auto; }
+
+@media only screen and (min-width: 1030px) { /****************************************************************** Site Name: Author: Stylesheet: Desktop Stylsheet This is the desktop size. It's larger than an iPad so it will only be seen on the Desktop. */ /* line 12, ../scss/breakpoints/_1030up.scss */ .wrap { width: 760px; } /* line 16, ../scss/breakpoints/_1030up.scss */ .wrap_nav { max-width: 760px; padding: 0px; } }
 
 .container { width: auto; max-width: 760px; padding: 0 15px; }
 
 #content { margin-top: 3.5em; }
 
-.header { border-top: 6px solid #4A90E2; }
+.header { border-top: 6px solid #4A90E2; font-size: 18px; }
 
 /* line 1599, ../scss/breakpoints/_base.scss */
 #logo { margin: 0.75em 0em; }

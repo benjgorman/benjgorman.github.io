@@ -11,6 +11,16 @@ p {
     margin-bottom: 0;
 }
 
+.wrap_nav {
+  margin: 0 auto;
+}
+
+/* line 1471, ../scss/breakpoints/_base.scss */
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 1030px) {
   /******************************************************************
   Site Name:
@@ -29,7 +39,8 @@ p {
 
   /* line 16, ../scss/breakpoints/_1030up.scss */
   .wrap_nav {
-    width: 760px;
+    max-width: 760px;
+    padding: 0px;
   }
 }
 
@@ -45,6 +56,7 @@ p {
 
 .header {
   border-top: 6px solid #4A90E2;
+  font-size: 18px;
 }
 
 /* line 1599, ../scss/breakpoints/_base.scss */

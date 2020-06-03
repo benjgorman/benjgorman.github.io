@@ -15,7 +15,7 @@
   var responsiveNav = function (el, options) {
 
     var computed = !!window.getComputedStyle;
-    
+
     /**
      * getComputedStyle polyfill for old browsers
      */
@@ -38,7 +38,7 @@
       };
     }
     /* exported addEvent, removeEvent, getChildren, setAttributes, addClass, removeClass, forEach */
-    
+
     /**
      * Add Event
      * fn arg can be an object or a function, thanks to handleEvent
@@ -76,7 +76,7 @@
           }
         }
       },
-    
+
       /**
        * Remove Event
        *
@@ -108,7 +108,7 @@
           }
         }
       },
-    
+
       /**
        * Get the children of any element
        *
@@ -129,7 +129,7 @@
         }
         return children;
       },
-    
+
       /**
        * Sets multiple attributes at once
        *
@@ -141,7 +141,7 @@
           el.setAttribute(key, attrs[key]);
         }
       },
-    
+
       /**
        * Adds a class to any element
        *
@@ -154,7 +154,7 @@
           el.className = el.className.replace(/(^\s*)|(\s*$)/g,"");
         }
       },
-    
+
       /**
        * Remove a class from any element
        *
@@ -165,7 +165,7 @@
         var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
         el.className = el.className.replace(reg, " ").replace(/(^\s*)|(\s*$)/g,"");
       },
-    
+
       /**
        * forEach method that passes back the stuff we need
        *
@@ -200,7 +200,7 @@
           transition: 284,                  // Integer: Speed of the transition, in milliseconds
           label: "Menu",                    // String: Label for the navigation toggle
           insert: "before",                 // String: Insert the toggle before or after the navigation
-          customToggle: "",                 // Selector: Specify the ID of a custom toggle
+          customToggle: "newtoggle",                 // Selector: Specify the ID of a custom toggle
           closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
           openPos: "relative",              // String: Position of the opened nav, relative or static
           navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
@@ -297,13 +297,13 @@
         if (!navOpen) {
      	  removeClass(document.getElementById("newtoggle"), "icon-open");
           addClass(document.getElementById("newtoggle"), "icon-close");
-          
+
           removeClass(nav, "closed");
           addClass(nav, "opened");
           addClass(htmlEl, opts.navActiveClass);
-          
-        
-          
+
+
+
           addClass(navToggle, "active");
           nav.style.position = opts.openPos;
           setAttributes(nav, {"aria-hidden": "false"});
@@ -319,7 +319,7 @@
         if (navOpen) {
           removeClass(document.getElementById("newtoggle"), "icon-close");
           addClass(document.getElementById("newtoggle"), "icon-open");
-          
+
           addClass(nav, "closed");
           removeClass(nav, "opened");
           removeClass(htmlEl, opts.navActiveClass);

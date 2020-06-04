@@ -1,5 +1,11 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Benjamin Gorman" # the name of your site, e.g. ACME Corp.
+title: "Benjamin Gorman" 
 sass:
   sass_dir: assets/css
+permalink: /:categories/:title/
+collections:
+  projects:
+    output: true
+  publications:
+    output: true

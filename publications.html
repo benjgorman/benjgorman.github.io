@@ -14,7 +14,13 @@ tagline: Here is what I've been publishing.
         </p>
       </header>
       <hr>
-    <div class="row">
-    </div>
+      <section>
+      {% for publication in site.publications %}
+        <h2>
+          <a href="{{ publication.url }}">
+            {{ publication.title }}
+          </a>
+      {% endfor %}
+    </section>
   </section>
 </article>

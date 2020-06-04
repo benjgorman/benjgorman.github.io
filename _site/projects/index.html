@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Projects | Benjamin Gorman</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Kreon:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/responsive-nav.css">
 <script src="/responsive-nav.js"></script>
@@ -15,9 +24,17 @@
 	<div id="inner-header" class="wrap_nav">
     <nav class="nav-collapse">
       <ul>
-        {% for item in site.data.navbar %}
-        <li><a href="{{ item.link }}" data-hover="{{ item.name }}">{{ item.name }}</a></li>
-        {% endfor %}
+        
+        <li><a href="/" data-hover="Home">Home</a></li>
+        
+        <li><a href="/notebook" data-hover="Notebook">Notebook</a></li>
+        
+        <li><a href="/projects" data-hover="Projects">Projects</a></li>
+        
+        <li><a href="/publications" data-hover="Publications">Publications</a></li>
+        
+        <li><a href="/about" data-hover="About">About</a></li>
+        
       </ul>
     </nav>
     <div class="page-logos">
@@ -26,3 +43,59 @@
     </div>
 		</div>
 </header>
+
+    <div id="content" class="container">
+      <div id="inner-content" class="wrap cf">
+          <div id="main" role="main">
+            <article>
+  <section class="entry-content cf" itemprop="articleBody">
+    <article>
+
+      <header class="article-header">
+        <h2>Projects</h2>
+        <h1 class="headline">Take a look at what I've been working on.</h1>
+        <p class="byline vcard">
+        </p>
+      </header>
+      <hr>
+    <section>
+      
+        <h2>
+          <a href="/projects/2018-08-20-lipreading/">
+            Lipreading
+          </a>
+      
+    </section>
+  </section>
+</article>
+
+            <div class="push"></div>
+            </div>
+          </div>
+      </div>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<footer class="footer" id="footer">
+      <div class="container">
+				<p class="text_center copyright">Find me elsewhere:</p>
+				<ul class="social">
+          <li><a title="You should follow me on Twitter" href="http://twitter.com/benjgorman"><div class="icon-twitter" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Find me on Facebook" href="http://facebook.com/bengorman"><div class="icon-facebook" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Stalk me on Instagram" href="http://instagram.com/benjgorman"><div class="icon-instagram" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Follow me on Github" href="http://github.com/benjgorman"><div class="icon-github" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+				</ul>
+				<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> Benjamin Gorman. All rights reserved. Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+      </div>
+</footer>
+
+    </body>
+    <div class="push"></div>
+    </div>
+  <script>
+  	var nav = responsiveNav(".nav-collapse");
+  </script>
+</html>

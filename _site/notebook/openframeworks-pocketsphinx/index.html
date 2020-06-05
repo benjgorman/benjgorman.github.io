@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Openframeworks & Pocketsphinx | Benjamin Gorman</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Kreon:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/responsive-nav.css">
+<script src="/responsive-nav.js"></script>
+
+<script>
+	/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+	!function(){function e(e,n,t,o){"use strict";var r=window.document.createElement("link"),a=n||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return r.rel="stylesheet",r.href=e,r.media="only x",o&&(r.onload=o),a.parentNode.insertBefore(r,a),r.onloadcssdefined=function(n){for(var t,o=0;o<i.length;o++)i[o].href&&i[o].href.indexOf(e)>-1&&(t=!0);t?n():setTimeout(function(){r.onloadcssdefined(n)})},r.onloadcssdefined(function(){r.media=t||"all"}),r}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,a){"use strict";if(r&&3===r.length){var i=t.navigator,c=t.document,d=t.Image,s=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===i.userAgent.indexOf("Chrome")||-1!==i.userAgent.indexOf("Series40")),l=new d;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,i=r[t&&s?0:t?1:2];t&&s?o.method="svg":t?o.method="datapng":o.method="png",o.href=i,n(e(i),a)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,d={};if(n=e.sheet,!n)return d;t=n.cssRules?n.cssRules:n.rules;for(var s=0;s<t.length;s++)r=t[s].cssText,a=o+t[s].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),d[a]=c);return d},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(d){continue}r=[];for(var s=0;s<n.length;s++)null!==n[s].getAttribute(a)&&r.push(n[s]);if(r.length)for(s=0;s<r.length;s++)r[s].innerHTML=e[c],r[s].style.backgroundImage="none",r[s].removeAttribute(a)}return r},d=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=d,e.embedSVG=d}(grunticon,this)}();
+	grunticon(["/grunt/output/icons.data.svg.css", "/grunt/output/icons.data.png.css", "/grunt/output/icons.fallback.css"], grunticon.svgLoadedCallback );
+	</script>
+	<noscript><link href="/grunt/output/icons.fallback.css" rel="stylesheet"></noscript>
+
+<header class="header" role="banner">
+	<div id="inner-header" class="wrap_nav">
+    <nav class="nav-collapse">
+      <ul>
+        
+        <li><a href="/" data-hover="Home">Home</a></li>
+        
+        <li><a href="/notebook" data-hover="Notebook">Notebook</a></li>
+        
+        <li><a href="/projects" data-hover="Projects">Projects</a></li>
+        
+        <li><a href="/publications" data-hover="Publications">Publications</a></li>
+        
+        <li><a href="/about" data-hover="About">About</a></li>
+        
+      </ul>
+    </nav>
+    <div class="page-logos">
+       <a href="\" rel="nofollow"><div id="logo_nav" class="icon-bg"></div></a>
+       <a href="#"><div id="newtoggle" class="icon-open" style="width: 30px; height: 35px; background-size:100%;"></div></a>
+    </div>
+		</div>
+</header>
+
+    <div id="content" class="container">
+      <div id="inner-content" class="wrap cf">
+          <div id="main" role="main">
+            <h1>Openframeworks & Pocketsphinx</h1>
+<p>16 Aug 2015 - </p>
+
+<p>I wanted to make an openFrameworks app which used Pocketsphinx to do some automatic transcribing of audio files and provide output. In this tutorial I’ll explain how I managed it.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>When I need to pull something together to test out a quick idea I reach for <a href="http://www.openframeworks.cc/">openFrameworks</a>. It’s an open source toolkit designed for “creative coding”. OpenFrameworks is written in C++ and runs on Windows, Mac OS X, Linux, iOS, and Android.</p>
+
+<p>Recently I also needed a library which could perform speech recognition both on audio files and directly from a microphone. I turned to <a href="http://cmusphinx.sourceforge.net">CMUSphinx</a>, which collects over 20 years of CMU’s research on speech processing. It uses state of the art speech recognition algorithms for efficient processing of audio data.</p>
+
+<p>Within this repository is a library called Pocketsphinx. Pocketsphinx is CMU’s recognition library for embedded devices, but it works just as well on desktop machines too. It depends on SphinxBase which provides common functionality across all CMUSphinx projects. To get started, you need to install Pocketsphinx and Sphinxbase.</p>
+
+<p>I wanted to build an openFrameworks application which used Pocketsphinx for transcribing audio files and output this to my app. I’m using OSX and XCode but the steps will be slightly similar for anyone working on Linux and Windows.</p>
+
+<h2 id="installing-pocketsphinx">Installing Pocketsphinx</h2>
+
+<p>First thing we have to do is to install Sphinxbase and Pocketsphinx by following their <a href="http://cmusphinx.sourceforge.net/wiki/tutorialpocketsphinx">tutorial</a>.</p>
+
+<p>Check that sphinx is installed properly by running pocketsphinx_continious.c from the command line. Our only problem here is that sphinx is a 64 bit library by default, and openFrameworks is a 32 library.</p>
+
+<p>Where you built sphinx, run the code below and it should install libraries for i386.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+make CFLAGS="-g -O2 -m32" install
+</code></pre></div></div>
+
+<p>In your Xcode project you’ll need to include the following files, make sure to hit ‘add to target’</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/include/sphinxbase/
+/usr/local/include/pocketsphinx/
+/usr/local/lib/libpocketsphinx.3.dylib
+/usr/local/lib/libsphinxad.3.dylib
+/usr/local/lib/libsphinxbase.3.dylib
+</code></pre></div></div>
+
+<p>And then we’ll set up a few project attributes. First in ‘Header Search Paths’ add</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/include
+</code></pre></div></div>
+
+<p>and in ‘Library Search Paths’ add</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/lib
+</code></pre></div></div>
+
+<p>Here’s what you should have by now:</p>
+
+<p><img src="/assets/images/post_images/project_setup.png" alt="Project Setup" /></p>
+
+<h2 id="example-app">Example App</h2>
+
+<p>Now I’ll walk you through an example which reads in a directory of files and processes each one when we press a key.</p>
+
+<p>We start up with some setup, set our directory path, read them through and add them to a vector so we can access them later. It’s important to note that Pocketsphinx only works with files that are 16 bit headerless raw files samples at 16KHz. Now you can do this with a program like Audacity or we can write a bash script which makes use of <a href="http://sox.sourceforge.net/">SoX</a> which does it automatically. You can read how I did that <a href="http://benjgorman.com/working-with-pocketsphinx/">here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void ofApp::setup()
+{
+    //some path, may be absolute or relative to bin/data
+    ofDirectory dir(directoryString);
+    //only show png files
+    dir.allowExt("raw");
+    //populate the directory object
+    dir.listDir();
+
+    //push the file names into our vector
+    for(int i = 0; i &lt; dir.numFiles(); i++)
+    {
+        files.push_back(dir.getName(i));
+    }
+
+    myfont.loadFont("helvetica.ttf", 20);
+}
+</code></pre></div></div>
+
+<p>Here is where we initialise the engine, the important step is the config call which sets up some parameters for the command line arguments which pocketsphinx uses. MODELDIR is defined in our header file and is specific to where you place the “en-us” language model. Mine was on my desktop so mine was #define MODELDIR “/Users/benjgorman/desktop”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bool ofApp::engineInit()
+{
+config = cmd_ln_init(NULL, ps_args(), TRUE, "-hmm", MODELDIR "/en-us/en- us", "-lm", MODELDIR "/en-us/en-us.lm.dmp", "-dict", MODELDIR "/en-us/cmudict-en-us.dict", NULL);
+
+
+//this is the setup you can use for microphone
+//config = cmd_ln_init(NULL, ps_args(), TRUE, "-hmm", MODELDIR "/en-us/en-us", "-allphone", MODELDIR "/en-us/en-us-phone.lm.dmp", "-backtrace", "yes", "-beam", "1e-20", "-pbeam", "1e-20", "-lw", "2.0", NULL);
+
+    if (config == NULL)
+    {
+        return false;
+    }
+    ps = ps_init(config);
+
+    if (ps == NULL)
+    {
+        return false;
+    }
+}
+</code></pre></div></div>
+
+<p>Here is how we open the engine, and open our file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int ofApp::engineOpen(string filename)
+{
+    FILE *fh;
+    char const *uttid;
+    int16 buf[512];
+    int rv; int32 score;
+
+    fh = fopen((directoryString + filename).c_str(), "rb");
+    if (fh == NULL)
+    {
+        return -1;
+    }
+    rv = ps_start_utt(ps);
+    if (rv &lt; 0) return 1;
+    while (!feof(fh))
+    {
+        size_t nsamp; nsamp = fread(buf, 2, 512, fh);
+        rv = ps_process_raw(ps, buf, nsamp, FALSE, FALSE);
+    }
+
+    engineClose();
+}
+</code></pre></div></div>
+
+<p>Here is where we close the engine and perform our final checks.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int ofApp::engineClose()
+{
+    char const *uttid;
+    int rv;
+    int32 score;
+
+    rv = ps_end_utt(ps);
+    if (rv &lt; 0)
+    {
+        return 1;
+    }
+    hyp = ps_get_hyp(ps, &amp;score);
+    if (hyp == NULL)
+    {
+        return 1;
+    }
+
+    printf("NEWLINE_________\n\n\nRecognized: %s\n", hyp);
+
+    sentence = hyp;
+
+    process_result();
+
+
+}
+</code></pre></div></div>
+
+<p>Here we exit the engine, free up some objects etc.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int ofApp::engineExit()
+{
+    ps_free(ps);
+    cmd_ln_free_r(config);
+    return 0;
+}
+</code></pre></div></div>
+
+<p>Then what we need to do is is transcribe the next file when we press the ‘n’ key.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void ofApp::keyPressed  (int key)
+{
+    if (key == 'n')
+    {
+        if (j&lt;files.size())
+        {
+            bEngineInitialed = engineInit();
+
+            engineOpen(files[j]);
+
+        }
+        j++;
+    }
+}
+</code></pre></div></div>
+
+<p>Last thing to do is simply write the current sentence to the screen!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void ofApp::draw()
+{
+    // in draw:
+    myfont.drawString(sentence +"\n", 100,100);
+}
+</code></pre></div></div>
+
+<p>You can download the full example from Github, but remember you need to follow the steps at the start of this tutorial in order to install Pocketsphinx on your system.</p>
+
+<p>Leave a comment and let me know if this all works out for you. I’ll be adding a similar tutorial for getting microphone intput in to work as well.</p>
+
+<p>[Find this full example on Github.</p>
+
+<p>](https://github.com/benjgorman/ofSphinxExample)</p>
+
+            <div class="push"></div>
+            </div>
+          </div>
+      </div>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<footer class="footer" id="footer">
+      <div class="container">
+				<p class="text_center copyright">Find me elsewhere:</p>
+				<ul class="social">
+          <li><a title="You should follow me on Twitter" href="http://twitter.com/benjgorman"><div class="icon-twitter" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Find me on Facebook" href="http://facebook.com/bengorman"><div class="icon-facebook" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Stalk me on Instagram" href="http://instagram.com/benjgorman"><div class="icon-instagram" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Follow me on Github" href="http://github.com/benjgorman"><div class="icon-github" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+				</ul>
+				<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> Benjamin Gorman. All rights reserved. Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+      </div>
+</footer>
+
+    </body>
+    <div class="push"></div>
+    </div>
+  <script>
+  	var nav = responsiveNav(".nav-collapse");
+  </script>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Crafting a CHI Rebuttal | Benjamin Gorman</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Kreon:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/responsive-nav.css">
+<script src="/responsive-nav.js"></script>
+
+<script>
+	/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+	!function(){function e(e,n,t,o){"use strict";var r=window.document.createElement("link"),a=n||window.document.getElementsByTagName("script")[0],i=window.document.styleSheets;return r.rel="stylesheet",r.href=e,r.media="only x",o&&(r.onload=o),a.parentNode.insertBefore(r,a),r.onloadcssdefined=function(n){for(var t,o=0;o<i.length;o++)i[o].href&&i[o].href.indexOf(e)>-1&&(t=!0);t?n():setTimeout(function(){r.onloadcssdefined(n)})},r.onloadcssdefined(function(){r.media=t||"all"}),r}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,a){"use strict";if(r&&3===r.length){var i=t.navigator,c=t.document,d=t.Image,s=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===i.userAgent.indexOf("Chrome")||-1!==i.userAgent.indexOf("Series40")),l=new d;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,i=r[t&&s?0:t?1:2];t&&s?o.method="svg":t?o.method="datapng":o.method="png",o.href=i,n(e(i),a)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,d={};if(n=e.sheet,!n)return d;t=n.cssRules?n.cssRules:n.rules;for(var s=0;s<t.length;s++)r=t[s].cssText,a=o+t[s].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),d[a]=c);return d},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(d){continue}r=[];for(var s=0;s<n.length;s++)null!==n[s].getAttribute(a)&&r.push(n[s]);if(r.length)for(s=0;s<r.length;s++)r[s].innerHTML=e[c],r[s].style.backgroundImage="none",r[s].removeAttribute(a)}return r},d=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=d,e.embedSVG=d}(grunticon,this)}();
+	grunticon(["/grunt/output/icons.data.svg.css", "/grunt/output/icons.data.png.css", "/grunt/output/icons.fallback.css"], grunticon.svgLoadedCallback );
+	</script>
+	<noscript><link href="/grunt/output/icons.fallback.css" rel="stylesheet"></noscript>
+
+<header class="header" role="banner">
+	<div id="inner-header" class="wrap_nav">
+    <nav class="nav-collapse">
+      <ul>
+        
+        <li><a href="/" data-hover="Home">Home</a></li>
+        
+        <li><a href="/notebook" data-hover="Notebook">Notebook</a></li>
+        
+        <li><a href="/projects" data-hover="Projects">Projects</a></li>
+        
+        <li><a href="/publications" data-hover="Publications">Publications</a></li>
+        
+        <li><a href="/about" data-hover="About">About</a></li>
+        
+      </ul>
+    </nav>
+    <div class="page-logos">
+       <a href="\" rel="nofollow"><div id="logo_nav" class="icon-bg"></div></a>
+       <a href="#"><div id="newtoggle" class="icon-open" style="width: 30px; height: 35px; background-size:100%;"></div></a>
+    </div>
+		</div>
+</header>
+
+    <div id="content" class="container">
+      <div id="inner-content" class="wrap cf">
+          <div id="main" role="main">
+            <h1>Crafting a CHI Rebuttal</h1>
+<p>11 Oct 2018 - </p>
+
+<p>Writing a <a href="https://chi2019.acm.org/">CHI paper</a> takes a long time, and waiting on your reviews can feel even longer. CHI allows authors to directly respond to reviewer’s feedback through a rebuttal process. However, unlike writing your paper, you are not given a lot of time (or characters!) to craft your CHI Rebuttal and it can be the difference between an accept or reject.</p>
+
+<p><strong>UPDATED FOR CHI2020</strong></p>
+
+<p>The review timeline changes slightly each year, but the important dates for rebuttals this year (CHI 2020) are:</p>
+
+<ul>
+  <li><strong>Reviews sent to authors:</strong> November 15, 2019 at 12pm (noon) PST / 3pm EST / 8pm GMT.</li>
+  <li><strong>Rebuttal period closes:</strong> November 22, 2019 at 22:00 ET.</li>
+</ul>
+
+<p>This only gives you <strong>five working days</strong> to: read your reviews, swear at R2, cry a little into a wine glass, and of course write, review and submit your rebuttal. Not a lot of time to process the feedback and work out a plan of attack. Below I’ve written how I approach reviews and rebuttals in general in case it helps.</p>
+
+<h2 id="review-terminology">Review Terminology</h2>
+
+<p>First, you should become familiar with the terminology used to describe each of the reviewers. This is important because these people have different levels of responsibility:</p>
+
+<ul>
+  <li><strong>ACs</strong> – Associate Chairs</li>
+  <li><strong>1AC</strong> – Primary AC (coordinates the review process and assigns two external reviewers)</li>
+  <li><strong>2AC</strong> – Second AC (Writes a full review)</li>
+  <li><strong>R1 -</strong> External Reviewer</li>
+  <li><strong>R2 -</strong> External Reviewer</li>
+  <li><strong>**3AC</strong> –** Third AC (Only added if there is a big difference in scores across reviewers)</li>
+</ul>
+
+<h2 id="analysing">Analysing</h2>
+
+<p>On receiving your reviews, it can be hard to know where to start. It can be very overwhelming, especially if this is your first time receiving reviews from CHI. After you read the dreaded email containing your reviews, close your laptop and go and do something else. You aren’t going to be productive at this time, so come back to it later. </p>
+
+<p>After you’ve given yourself some thinking space, it’s time to get to work on your rebuttal. The first I recommend is that you download your reviews in plain text format, as they are simply easier to read when out of the PCS system. Next, print your reviews or allow yourself some way to read them without being able to type anything. You need to give yourself time to really understand and dissect what the reviewers are saying.</p>
+
+<h3 id="first-read-through"><strong>First Read Through</strong></h3>
+
+<p>During the first read through, don’t focus too much on individual points, your goal here is to understand where each of the reviewers stand. Who is the most positive (or the <strong>paper’s champion</strong>) and who is the most negative (the <strong>paper’s destroyer</strong>)? This is a crucial step of your rebuttal, as within a small amount of characters (last year it was only <em>5000</em>) you need to give the champion more reasons to love your paper, while at the same time reduce any lingering ammo that the paper’s destroyer could equip. Your overall goal is to convince the AC’s that your paper deserves to presented and published at CHI.</p>
+
+<h3 id="second-read-through"><strong>Second Read Through</strong></h3>
+
+<p>On the second read through, focus on individual points using highlighters. I use two colours and highlight positive and negative points raised. It can be very easy to focus on the negative things reviewers say, but you need to balance this by focusing on the positives too!</p>
+
+<h3 id="analysis-phase"><strong>Analysis Phase</strong></h3>
+
+<p>I will now begin to analyse my reviews as if I’m coding qualitative research data. If you have never done this, think of it as “tagging” extracts of text with meaningful labels (known as <em>codes</em>). Go through each review and ‘code’ individual points raised while also ‘coding’ each point with the reviewer’s label (<em>this is a very important step</em> - which I’ll explain below). I use <a href="https://www.maxqda.com/">MAXQDA</a>, but you can also do the same thing using Excel.</p>
+
+<p>See Figure 1 for an example of two coded extracts, and Figure 2 shows my final list of codes. At the end of this phase you’ll be able to collate all extracts under the same code.</p>
+
+<p><img src="/assets/images/post_images/Screen-Shot-2018-10-10-at-20.13.10-2.png" alt="" /></p>
+
+<p><strong>Figure 1:</strong> An example of a coded excerpt from my <a href="http://benjgorman.com/publication/framework-speechreading-acquisition-tools/">2017 CHI paper</a> reviews. The first extract is coded as “Positive”. The second extract is coded as “Negative” and is about “Missing Info”. I’ve coded it as a “Minor” point because I simply could add this in my final paper. Both extracts are coded as being written by “R1 (2AC)”.</p>
+
+<p>When you have finishing coding your reviews, you’ll be able to produce what I call <em>“collated comments”</em>. This will be a list of similar comments by different reviewers collated under each of your codes. For instance, perhaps the <strong>2AC</strong> and <strong>R1</strong> were concerned about your statistical analysis; <em>“Data Analysis”</em> could be the code that these comments are collated under.</p>
+
+<p><img src="/assets/images/post_images/FinalCodeSystem-2.png" alt="" /></p>
+
+<p><strong>Figure 2:</strong> The final code system from my <a href="http://benjgorman.com/publication/framework-speechreading-acquisition-tools/">2017 CHI paper</a> reviews. You can see “Amount of Information” was the most raised point by the reviewers. This was an important point to discuss in my rebuttal, and the reviewers were right to raise it.</p>
+
+<p>Once you have a set of collated comments read through them again and start to move each group of comments around the document in order of priority. For instance, if you have a confound in your study this would be of very high priority, or if something is raised by all reviewers again this would be high in priority.</p>
+
+<p>At some point during this phase, you need to draw a line and say where <em>“Major”</em> and <em>“Minor”</em> points are. You can’t address every point in your rebuttal, as there is simply not enough characters. You can then take this document to your supervisor or collaborators and discuss how to respond to each of the points raised.</p>
+
+<h2 id="responding-to-points">Responding to Points</h2>
+
+<p>Now you have a good understanding of what the major concerns are about your paper, draft a sentence or two against each of the points. When responding to reviewers be courteous and polite, reviewing is often a thankless task so be grateful they have taken the time to give you feedback - even if you currently <em>despise</em> them!</p>
+
+<p>It’s important to know at this stage that you can’t promise drastic changes, the timeline for camera ready submissions is very short. In fact, reviewers are told to accept papers “as is”, because there is no way for reviewers to check that the authors did the changes they said - this responsibility falls to the 1AC but they don’t have time to check each paper thoroughly. Therefore, if you suggest too many changes <em>this will kill</em> your paper’s chances, as it’s clearly not ready to be published.</p>
+
+<p>Always remember that a reviewer’s only knowledge of your work comes from reading the paper, so if they are confused about an aspect of your research, then the writing in your paper has misled them. However, If you do think a reviewer missed something that was in your paper, don’t outright state this, kindly direct them to this information.</p>
+
+<p>For instance, perhaps R1 didn’t appreciate the way you analysed your qualitative data. However, you provided a reason or citation for this in your paper. Directly point this out to the AC’s by using the citation number number and page number where you provide justification. For instance you could say the following:</p>
+
+<blockquote>
+  <p>R1 requested more details on our analysis of open-ended question data. We followed Braun and Clarke, and did not conduct inter-rater coding following the justification provided in [23] (pg 4).</p>
+</blockquote>
+
+<p>Each response should convince reviewers that you’ll be able to address their concerns within the revision period. You don’t need to provide the exact wording; just outline the change you will make and where. In some cases, you won’t need to make a change, instead you will need to convince reviewer’s you have done the right thing by providing evidence or justification.</p>
+
+<p>An often overlooked aspect of writing a rebuttal is not outlining how you will make space within your paper for new content or changes (e.g., a new paragraph to justify an aspect of your study design). In these cases outline to reviewers where in the paper you expect to be able to reclaim space - <strong>but tread carefully</strong>, you don’t want to remove something that some reviewers think is valuable (I made this mistake before and a reviewer dropped their score post-rebuttal!).</p>
+
+<h2 id="formatting">Formatting</h2>
+
+<p>Formatting your rebuttal is extremely important, even though you only have a limited number of characters to play with, you still need to make it easy to read.</p>
+
+<p>In particular, ensure your rebuttal allows reviewers to easily find your responses to the points they raised. Refer to reviewers by <strong>R1</strong>, <strong>R2</strong> etc. (this is why we took the time to code the extracts with their labels!).</p>
+
+<p>Use bullet points and whitespace to allow for quick scanning. Start with the major points going down towards minor issues. You don’t need to say you will fix typos and small mistakes, this is expected. Below is an example format, that has worked for me in the past:</p>
+
+<p>Thanks to the reviewers for their insightful comments. We are confident that all concerns can be addressed within the revision period and believe our paper presents a valuable contribution to the CHI community.</p>
+
+<p>POINT A: 1AC 2AC R1
+// If reviewers missed things you can point their attention by saying (pg. 6)</p>
+
+<p>POINT B: ALL Rs</p>
+
+<p>POINT C: 1AC 2AC</p>
+
+<p>POINT D: 1AC 2AC</p>
+
+<p>POINT E: R1 R2
+Thanks to R1 &amp; R2 for pointing out that we do not discuss…</p>
+
+<p>MISC
+// Minor Points Raised could go here</p>
+
+<p>Finally, we will address all other concerns through a full edit pass, and ________________ to create additional space as needed.</p>
+
+<p>Once you have finished a draft, send it to your supervisor, peers and collaborators. It can also help to send it to a neutral party (a friend, partner, family member) who isn’t a researcher, as they may pick up on an angry or dismissive tone that others miss.</p>
+
+<h2 id="take-home-process">Take Home Process</h2>
+
+<p>Ok. So I’ve covered my process in more detail than I originally intended to, but here are the main steps:</p>
+
+<ol>
+  <li>Process the feedback.</li>
+  <li>Analyse the points raised.</li>
+  <li>Collate the points raised (by coding the data set).</li>
+  <li>Prioritise the points (draw a line at major vs minor points).</li>
+  <li>
+    <p>Draft a response to each point (and get a second reader).</p>
+  </li>
+  <li>Focus on the formatting (and cut to the character limit).</li>
+  <li>Submit and know it’s now out of your hands!</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So is it worth always writing a rebuttal? In my opinion, YES! However, it won’t necessarily save your paper. Your rebuttal will really only play a role if your paper is borderline, or your reviewers did a poor job.</p>
+
+<p>In my three paper submissions to CHI, twice my rebuttal led to reviewers raising their scores. Although, the first time I wrote a rebuttal I said I would take a section out to please one reviewer and this led to another reviewer dropping their score - so it doesn’t always work out.</p>
+
+<p>Regardless of the outcome, writing a rebuttal will help improve both your paper and your future research approach, so it’s well worth the effort. <strong>Good luck!</strong></p>
+
+<hr />
+
+<p>What does your process for crafting a rebuttal look like? Did I miss something? Drop a comment or tweet me <a href="http://twitter.com/benjgorman">@benjgorman</a></p>
+
+<p>Some other useful posts on writing rebuttals: <br />
+<a href="https://www.hcilab.org/blog/2012/11/12/sigchi-rebuttals-some-suggestions-to-write-them/﻿">SIGCHI Rebuttals Some Suggestions</a><br />
+<a href="https://hyunyoungsong.wordpress.com/2010/12/18/how-to-write-a-acm-sigchi-rebuttal/">How to Write an ACM SIGCHI Rebuttal</a><br />
+<a href="https://www.st.cs.uni-saarland.de/zeller/onresearch/rebuttal-patterns.php3%EF%BB%BF">Patterns for Writing Good Rebuttals</a></p>
+
+            <div class="push"></div>
+            </div>
+          </div>
+      </div>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<footer class="footer" id="footer">
+      <div class="container">
+				<p class="text_center copyright">Find me elsewhere:</p>
+				<ul class="social">
+          <li><a title="You should follow me on Twitter" href="http://twitter.com/benjgorman"><div class="icon-twitter" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Find me on Facebook" href="http://facebook.com/bengorman"><div class="icon-facebook" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Stalk me on Instagram" href="http://instagram.com/benjgorman"><div class="icon-instagram" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+					<li><a title="Follow me on Github" href="http://github.com/benjgorman"><div class="icon-github" style="width: 35px; height: 35px; background-size:100%;" data-grunticon-embed></div></a></li>
+				</ul>
+				<p class="source-org copyright">Copyright &copy; <?php echo date('Y'); ?> Benjamin Gorman. All rights reserved. Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+      </div>
+</footer>
+
+    </body>
+    <div class="push"></div>
+    </div>
+  <script>
+  	var nav = responsiveNav(".nav-collapse");
+  </script>
+</html>

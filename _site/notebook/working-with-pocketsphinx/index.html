@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Working With Pocketsphinx | Benjamin Gorman</title>
+    <title>Converting .wav files for use with Pocketsphinx | Benjamin Gorman</title>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
@@ -47,17 +47,52 @@
     <div id="content" class="container">
       <div id="inner-content" class="wrap cf">
           <div id="main" role="main">
-            <h1>Working With Pocketsphinx</h1>
-<p>20 Aug 2016 - jill</p>
+            <h1>Converting .wav files for use with Pocketsphinx</h1>
+<p>17 Aug 2015 - </p>
 
-<p>A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.</p>
+<p>When using <a href="http://cmusphinx.sourceforge.net/">Pocketsphinx</a>, you are required to have your audio data in a <strong>16kHz</strong> (or 8kHz, depending on the training data) <strong>16bit Mono</strong> (single channel) <strong>Little-Endian</strong> file. One way to do this is to export each file with Audacity but this is tiresome. However, Audacity is good for removing noise from a list of files using <a href="http://manual.audacityteam.org/o/man/edit_chains.html">chains</a>.</p>
 
-<p>In some countries, bananas used for cooking may be called “plantains”,
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.</p>
+<p>Once we have done that we can use <a href="http://sox.sourceforge.net/">SoX</a> to take care of the rest. Here is a quick bash script I wrote which will do just that.</p>
+
+<h2 id="bash-script">Bash Script</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+# converts all .wav-files in the immediate folder that
+# this script is executed to
+# .raw 16khz, 16bit, little endian, mono
+# i.e. for using them with pocketsphinx:
+# http://cmusphinx.sourceforge.net/
+#
+# all converted files will be in the new subdirectory
+# "converted" inside the directory this script is
+# executed; the original files will not be touched
+#
+# you have to install sox prior to running this
+# script and add it to your bash profile or add to the directory
+# http://sox.sourceforge.net/
+#
+# Author: benjgorman
+# http://benjgorman.com
+EXT=wav
+DIRECTORY=converted
+if [ ! -d DIRECTORY ]; then
+  mkdir $DIRECTORY
+fi
+for i in *; do
+    if [ "${i}" != "${i%.${EXT}}" ];then
+        echo "Working on File $i"
+        ./sox "$i" -r 16000 "./$DIRECTORY/$i.raw"
+        if [ $? -eq 0 ]
+        then
+        echo "Successfully converted File: $i"
+        else
+        echo "File \"$i\" could not be converted. Aborting!"
+        exit 1
+        fi
+    fi  
+done
+exit 0
+</code></pre></div></div>
 
             <div class="push"></div>
             </div>

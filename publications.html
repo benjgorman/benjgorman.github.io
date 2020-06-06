@@ -16,10 +16,12 @@ tagline: Here is what I've been publishing.
       <hr>
       <section>
       {% for publication in site.publications %}
-        <h2>
+        <h3>
           <a href="{{ publication.url }}">
             {{ publication.title }}
           </a>
+        </h3>
+        <h4>{{ publication.year }}</h4>
       {% endfor %}
     </section>
   </section>

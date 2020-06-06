@@ -3,45 +3,46 @@ layout: default
 title: Home
 ---
 
-            <article>
-              <header class="article-header">
-              <h3 class="page-title">Hello!</h3>
-                <p class="byline vcard">
-                </p>
-              </header>
-              <section class="entry-content cf" itemprop="articleBody">
-                <div><img class="avatar" src="assets/images/Ben2018.jpeg"></div>
-                <article>
+<article>
+  <header class="article-header">
+  <h3 class="page-title">Hello!</h3>
+  <p class="byline vcard">
+    
+  </p>
+  </header>
+  <section class="entry-content cf" itemprop="articleBody">
+    <div><img class="avatar" src="assets/images/Ben2018.jpeg"></div>
+    <article>
 
-                <h1 class="headline">My name is Ben. I am a Lecturer in Computer Science at Bournemouth University, where I research Accessibility and HCI.</h1>
+    <h1 class="headline">My name is Ben. I am a Lecturer in Computer Science at Bournemouth University, where I research Accessibility and HCI.</h1>
 
-                <a title="You should follow me on Twitter" href="http://twitter.com/benjgorman">You should follow me on Twitter
-                <div class="icon-twitterbird_home" data-grunticon-embed></div></a>
+    <a title="You should follow me on Twitter" href="http://twitter.com/benjgorman">You should follow me on Twitter
+    <div class="icon-twitterbird_home" data-grunticon-embed></div></a>
 
-                </article>
-                <hr>
-                <h2>Recent Publications</h2>
-                <div class="row wrap">
-                  {% for publication in site.publications %}
-                  <div class="row wrap ml-2 mr-2">
-                    <h3>
-                      <a href="{{ publication.url }}">
-                        {{ publication.title }}
-                      </a>
-                    </h3>
-                  </div>
-                  {% endfor %}
-                </div>
+    </article>
+    <hr>
+    <h2>Recent Publications</h2>
+    <div class="row wrap">
+      {% for publication in site.publications limit: 3 %}
+      <div class="row wrap ml-2 mr-2">
+        <h3>
+          <a href="{{ publication.url }}">
+            {{ publication.title }}
+          </a>
+        </h3>
+      </div>
+      {% endfor %}
+    </div>
 
-                <h2>Recent Articles</h2>
+    <h2>Recent Articles</h2>
 
-                <div class="row wrap">
-                  {% for post in site.posts %}
-                  <div class="row wrap ml-2 mr-2">
-                      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                      <p>{{ post.excerpt }}</p>
-                    </div>
-                  {% endfor %}
-                </div>
-              </section>
-            </article>
+    <div class="row wrap">
+      {% for post in site.posts limit: 3 %}
+      <div class="row wrap ml-2 mr-2">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</article>

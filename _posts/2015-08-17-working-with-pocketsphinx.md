@@ -3,6 +3,7 @@ title: "Converting .wav files for use with Pocketsphinx"
 date: "2015-08-17"
 layout: post
 categories: notebook
+excerpt: "When using Pocketsphinx, you are required to have your audio files in a specific format. Using Audacity for this task works but it sucks. Lets write a bash script to save time!"
 ---
 
 When using [Pocketsphinx](http://cmusphinx.sourceforge.net/), you are required to have your audio data in a **16kHz** (or 8kHz, depending on the training data) **16bit Mono** (single channel) **Little-Endian** file. One way to do this is to export each file with Audacity but this is tiresome. However, Audacity is good for removing noise from a list of files using [chains](http://manual.audacityteam.org/o/man/edit_chains.html).

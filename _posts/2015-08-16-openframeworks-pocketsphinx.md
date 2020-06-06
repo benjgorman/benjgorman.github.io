@@ -3,6 +3,7 @@ title: "Openframeworks & Pocketsphinx"
 date: "2015-08-16"
 layout: post
 categories: notebook
+excerpt: "I wanted to make an openFrameworks app which used Pocketsphinx to do some automatic transcribing of audio files and provide output. In this tutorial I'll explain how I managed it."
 ---
 
 I wanted to make an openFrameworks app which used Pocketsphinx to do some automatic transcribing of audio files and provide output. In this tutorial I'll explain how I managed it.

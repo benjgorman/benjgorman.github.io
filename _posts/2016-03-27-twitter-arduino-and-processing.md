@@ -3,6 +3,7 @@ title: "Posting to Twitter with an Arduino via Processing using Twitter4j"
 date: "2016-03-27"
 layout: post
 categories: notebook
+excerpt: "Recently I had to teach my students how produce a physical computing device using Arduino which talked to Twitter. This tutorial shows you how to let your Arduino communicate with Processing over serial, which then talks to Twitter."
 ---
 
 Recently I had to teach my students how to produce a physical computing device using Arduino which was talked to Twitter. Without an ethernet or WiFi shield, the best way to accomplish this is letting an Arduino communicate with Processing over a serial connection, which then talks to Twitter. We don't have to use Processing for anything in particular other than talking to the API. And to talk to the API we can use a library called Twitter4J. Twitter4J is an unofficial Java library for the Twitter API. With Twitter4J, you can easily integrate any Java application (or in our case a Processing sketch) with Twitter.

@@ -3,6 +3,7 @@ title: "Arduino Powered Arcade Joystick"
 date: "2015-07-19"
 layout: post
 categories: notebook
+excerpt: "Who doesn’t love some classic arcade gaming fun? Although there are countless versions of these games for our iPhones and tablets, there really is no substitute for the classic arcade stick and the colourful buttons with that vintage clicky feel."
 ---
 
 ## Introduction

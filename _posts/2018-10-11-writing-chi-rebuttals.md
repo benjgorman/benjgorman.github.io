@@ -3,6 +3,7 @@ title: "Crafting a CHI Rebuttal"
 date: "2018-10-11"
 layout: post
 categories: notebook
+excerpt: "CHI allows authors to respond to reviewer's feedback through a rebuttal. However, unlike writing your paper, you are not given a lot of time (or characters!) to craft your CHI Rebuttal. Here I share my process and tips!"
 ---
 
 Writing a [CHI paper](https://chi2019.acm.org/) takes a long time, and waiting on your reviews can feel even longer. CHI allows authors to directly respond to reviewer's feedback through a rebuttal process. However, unlike writing your paper, you are not given a lot of time (or characters!) to craft your CHI Rebuttal and it can be the difference between an accept or reject.

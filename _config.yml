@@ -11,3 +11,4 @@ collections:
   publications:
     output: true
     permalink: /:collection/:title
+    sort_by: year

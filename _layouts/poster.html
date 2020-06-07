@@ -4,17 +4,17 @@ layout: default
 <article>
   <section class="entry-content cf" itemprop="articleBody">
     <article>
-
       <header class="article-header">
-		<h2>{{ page.year }}</h2>
+		    <h2>{{ page.year }}</h2>
         <h2>{{ page.title }}</h2>
         <h2>{{ page.authors }}</h2>
         <h2>{{ page.venue }}</h2>
-        <h2><a href="{{ page.link }}">Read this on the ACM Digital Library</a>
       </header>
       <hr>
     <section class="container wrap">
-        I'M A POSTER
+      <img src="{{ page.image-url }}"/>
+      <h2><a href="{{ page.download-link }}">View Full Size</a>
     </section>
+    <hr>
   </section>
 </article>

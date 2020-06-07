@@ -17,25 +17,17 @@ p {
 }
 
 .poster-card {
-  width: 100%;
   background-color: #EEE;
-  padding: 0;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-  margin: 0 0px 30px 0px;
-  display: inline-block;
   zoom: 1;
   cursor: pointer;
 }
 
 .project-card {
-  width: 100%;
   background-color: #EEE;
-  padding: 0;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-  margin: 0 0px 30px 0px;
-  display: inline-block;
   zoom: 1;
   cursor: pointer;
 }
@@ -256,18 +248,24 @@ HEADER STYLES
   border-top: 6px solid #4A90E2;
 }
 
-.icon-download {
+.icon-arrow {
   display: inline-block;
   width: 20px;
-  height: 20px;
+  height: 14px;
+  background: url(/grunt/svgs/right_sm.svg);
+}
+
+.icon-download {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
   background: url(/grunt/svgs/down.svg);
-  background-size: 20px 20px;
 }
 
 .icon-twitterbird_home {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background: url(/grunt/svgs/twitterbird.svg);
   background-size: 20px 20px;
 }
@@ -432,8 +430,8 @@ body {
 
 /* line 2346, ../scss/breakpoints/_base.scss */
 #footer li a svg {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 
 /* line 2352, ../scss/breakpoints/_base.scss */
@@ -485,9 +483,6 @@ body {
   display: block;
   padding: 0em;
   text-align: center;
-
-
-  background: #4A90E2;
 
   cursor: pointer;
 

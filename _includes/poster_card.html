@@ -1,6 +1,14 @@
-<div class="poster-card ml-2 mr-2" style="width: 14rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{ poster.title }}</h5>
-    <img src="{{ poster.image-url }}"/>
+<div class="col-sm-4 col-md-4 pb-4 pt-2">
+  <a href="{{ poster.url }}"">
+<div class="card poster-card h-100">
+  <h5 class="card-header">{{ poster.title }}</h5>
+  <img class="card-img-top" src="{{ poster.image-url }}" alt="Card image cap">
+  <div class="card-body mx-2 p-0">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
+  <div class="card-footer h-100">
+    <a href="{{ project.url }}"" class="card-link">Another link</a>
+  </div>
+</div>
+</a>
 </div>

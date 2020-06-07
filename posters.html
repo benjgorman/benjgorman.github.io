@@ -15,11 +15,9 @@ tagline: These are posters I have presented.
       </header>
       <hr>
     <section>
-      <div class="row wrap card-deck">
+      <div class="row wrap px-2">
       {% for poster in site.posters %}
-          <a href="{{ project.url }}">
-            {% include poster_card.html %}
-          </a>
+          {% include poster_card.html %}
       {% endfor %}
       </div>
     </section>

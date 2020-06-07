@@ -31,17 +31,12 @@ tagline: Here is what I've been publishing.
     </section>
     <section>
     <h2>Posters</h2>
-    <div class="row wrap card-deck">
+    <div class="row wrap px-2">
     {% for poster in site.posters %}
-          <a href="{{ project.url }}">
-            {% include poster_card.html %}
-          </a>
+          {% include poster_card.html %}
       {% endfor %}
     </div>
     </section>
     <hr>
   </section>
 </article>
-
-
-

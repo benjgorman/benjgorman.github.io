@@ -15,14 +15,33 @@ tagline: Here is what I've been publishing.
       </header>
       <hr>
       <section>
-      {% for publication in site.publications %}
-        <h3>
-          <a href="{{ publication.url }}">
-            {{ publication.title }}
-          </a>
-        </h3>
-        <h4>{{ publication.year }}</h4>
-      {% endfor %}
+      {% assign groups = site.publications | group_by: "category" | sort: "name" %}
+          {% for group in groups %}
+          <h2>{{ group.name }}</h3>
+          {% for item in group.items reversed %}
+          <h3>
+            <a href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </h3>
+          <h4>{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
+          {%endfor%}
+          <hr>
+      {%endfor%}
     </section>
+    <section>
+    <h2>Posters</h2>
+    <div class="row wrap card-deck">
+    {% for poster in site.posters %}
+          <a href="{{ project.url }}">
+            {% include poster_card.html %}
+          </a>
+      {% endfor %}
+    </div>
+    </section>
+    <hr>
   </section>
 </article>
+
+
+

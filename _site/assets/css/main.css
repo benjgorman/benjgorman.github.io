@@ -2062,6 +2062,8 @@ p { margin-top: 0; margin-bottom: 0; }
 
 .entry-content img { max-width: 100%; height: auto; }
 
+.poster-card { width: 100%; background-color: #EEE; padding: 0; border-radius: 4px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05); margin: 0 0px 30px 0px; display: inline-block; zoom: 1; cursor: pointer; }
+
 .project-card { width: 100%; background-color: #EEE; padding: 0; border-radius: 4px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05); margin: 0 0px 30px 0px; display: inline-block; zoom: 1; cursor: pointer; }
 
 .entry-content pre { background: #323944; color: #f8f9fa; font-size: 0.9em; padding: 1.5em; margin: 0 0 1.5em; border-radius: 3px; font-family: monospace, serif; font-size: 0.75em; }

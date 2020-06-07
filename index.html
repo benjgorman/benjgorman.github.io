@@ -23,14 +23,16 @@ title: Home
     <hr>
     <h2>Recent Publications</h2>
     <div class="row wrap">
-      {% for publication in site.publications limit: 3 %}
-      <div class="row wrap ml-2 mr-2">
+      {% assign items = site.publications | sort: 'date' | reverse %}
+      {% for item in items limit:3 %}
+        <div class="row wrap ml-2 mr-2">
         <h3>
-          <a href="{{ publication.url }}">
-            {{ publication.title }}
+          <a href="{{ item.url }}">
+            <p>{{ item.title }}</p>
           </a>
         </h3>
-      </div>
+        <p>{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</p>
+        </div>
       {% endfor %}
     </div>
 

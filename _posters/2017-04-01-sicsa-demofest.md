@@ -1,0 +1,7 @@
+---
+layout: poster
+category: 'Poster'
+title: "A Framework for Speechreading Acquisition Tools"
+authors: Benjamin M. Gorman
+image-url: "/assets/images/posters/SicsaPoster.png"
+---

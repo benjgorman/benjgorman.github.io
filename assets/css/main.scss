@@ -16,6 +16,18 @@ p {
   height: auto;
 }
 
+.poster-card {
+  width: 100%;
+  background-color: #EEE;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  margin: 0 0px 30px 0px;
+  display: inline-block;
+  zoom: 1;
+  cursor: pointer;
+}
+
 .project-card {
   width: 100%;
   background-color: #EEE;

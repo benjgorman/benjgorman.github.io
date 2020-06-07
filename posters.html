@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Projects
-tagline: Take a look at what I've been working on.
+title: Posters
+tagline: These are posters I have presented.
 ---
 <article>
   <section class="entry-content cf" itemprop="articleBody">
@@ -16,9 +16,9 @@ tagline: Take a look at what I've been working on.
       <hr>
     <section>
       <div class="row wrap card-deck">
-      {% for project in site.projects %}
+      {% for poster in site.posters %}
           <a href="{{ project.url }}">
-            {% include project_card.html %}
+            {% include poster_card.html %}
           </a>
       {% endfor %}
       </div>

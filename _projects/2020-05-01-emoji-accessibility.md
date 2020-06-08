@@ -9,6 +9,5 @@ description: "Emoji are graphical symbols that appear in many aspects of our liv
 Emoji Accessibility for Visually Impaired People. Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI '20)
 
 ## Collborators
-Dr Garreth Tigwell - Rochester Institute of Technology
-Dr Ben Gorman - Bournemouth University
-Dr Rachel Menzies - The University of Dundee
+* Dr Garreth Tigwell - Rochester Institute of Technology
+* Dr Rachel Menzies - The University of Dundee

@@ -18,6 +18,7 @@ tagline: Here is what I've been publishing.
       {% assign groups = site.publications | group_by: "category" | sort: "name" %}
           {% for group in groups %}
           <h2>{{ group.name }}</h2>
+          <div class="row wrap px-4">
           {% for item in group.items reversed %}
           <h3>
             <a href="{{ item.url }}">
@@ -26,6 +27,7 @@ tagline: Here is what I've been publishing.
           </h3>
           <h4>{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
           {%endfor%}
+          </div>
           <hr>
       {%endfor%}
     </section>

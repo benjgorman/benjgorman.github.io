@@ -7,7 +7,7 @@ title: Home
   <header class="article-header">
   <h3 class="page-title">Hello!</h3>
   <p class="byline vcard">
-    
+
   </p>
   </header>
   <section class="entry-content cf" itemprop="articleBody">
@@ -26,12 +26,7 @@ title: Home
       {% assign items = site.publications | sort: 'date' | reverse %}
       {% for item in items limit:3 %}
         <div class="row wrap ml-2 mr-2">
-        <h3>
-          <a href="{{ item.url }}">
-            <p>{{ item.title }}</p>
-          </a>
-        </h3>
-        <p>{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</p>
+          <a href="{{ item.url }}"><h3>{{ item.title }} - {{ item.venue }}</h3></a>
         </div>
       {% endfor %}
     </div>

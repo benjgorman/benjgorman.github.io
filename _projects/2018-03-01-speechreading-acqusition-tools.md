@@ -1,9 +1,11 @@
 ---
 layout: project
-image: "/assets/images/project_images/MirrorMirror-1.png"
-excerpt: "An android app which helps you practice speechreading."
+image: "/assets/images/project_images/Framework.png"
+excerpt: "A framework to design tools to help with speechreading."
 category: "Research"
+description: ""
 ---
+
 ## Associated Publications
 
 

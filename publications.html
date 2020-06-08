@@ -17,7 +17,7 @@ tagline: Here is what I've been publishing.
       <section>
       {% assign groups = site.publications | group_by: "category" | sort: "name" %}
           {% for group in groups %}
-          <h2>{{ group.name }}</h3>
+          <h2>{{ group.name }}</h2>
           {% for item in group.items reversed %}
           <h3>
             <a href="{{ item.url }}">

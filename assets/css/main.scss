@@ -2,6 +2,10 @@
 ---
 @import 'bootstrap/bootstrap';
 
+/******************************************************************
+HTML BASIC ELEMENTS
+******************************************************************/
+
 * {
   margin: 0;
 }
@@ -11,70 +15,15 @@ p {
     margin-bottom: 0;
 }
 
-.entry-content img {
-  max-width: 100%;
-  height: auto;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.poster-card {
-  background-color: #EEE;
-  border-radius: 4px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-  zoom: 1;
-  cursor: pointer;
+body {
+  margin-bottom: 180px; /* Margin bottom by footer height */
 }
 
-.project-card {
-  background-color: #EEE;
-  border-radius: 4px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-  zoom: 1;
-  cursor: pointer;
-}
-
-.entry-content pre {
-  background: #323944;
-  color: #f8f9fa;
-  font-size: 0.9em;
-  padding: 1.5em;
-  margin: 0 0 1.5em;
-  border-radius: 3px;
-  font-family: monospace, serif;
-  font-size: 0.75em;
-}
-
-.wrap_nav {
-  margin: 0 auto;
-}
-
-/* line 1471, ../scss/breakpoints/_base.scss */
-.wrap {
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name:
-  Author:
-
-  Stylesheet: Desktop Stylsheet
-
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-
-  ******************************************************************/
-  /* line 12, ../scss/breakpoints/_1030up.scss */
-  .wrap {
-    width: 760px;
-  }
-
-  /* line 16, ../scss/breakpoints/_1030up.scss */
-  .wrap_nav {
-    max-width: 760px;
-    padding: 0px;
-  }
-}
 
 .container {
   width: auto;
@@ -86,38 +35,16 @@ p {
   margin-top: 3.5em;
 }
 
-.header {
-  border-top: 6px solid #4A90E2;
-  font-size: 18px;
+.wrap_nav {
+  margin: 0 auto;
 }
 
-.article-header {
-  padding-top: 2em;
+.wrap {
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* line 1599, ../scss/breakpoints/_base.scss */
-#logo {
-  margin: 0.75em 0em;
-}
-/* line 1602, ../scss/breakpoints/_base.scss */
-#logo a {
-  color: #fff;
-}
 
-.avatar {
-  float: right;
-  width: 30%;
-  margin-bottom: 1.5em;
-  margin-left: 1.5em;
-}
-
-/* end .hentry */
-/* line 1719, ../scss/breakpoints/_base.scss */
-.single-title,
-.page-title,
-.entry-title {
-  margin: 0;
-}
 
 /*********************
 LINK STYLES
@@ -241,53 +168,6 @@ h5, .h5 {
 }
 
 /*********************
-HEADER STYLES
-*********************/
-/* line 1595, ../scss/breakpoints/_base.scss */
-.header {
-  border-top: 6px solid #4A90E2;
-}
-
-.icon-arrow {
-  display: inline-block;
-  width: 20px;
-  height: 14px;
-  background: url(/grunt/svgs/right_sm.svg);
-}
-
-.icon-download {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url(/grunt/svgs/down.svg);
-}
-
-.icon-twitterbird_home {
-  display: inline-block;
-  width: 21px;
-  height: 19px;
-  background: url(/grunt/svgs/twitterbird.svg);
-  background-size: 100%;
-}
-
-.icon-bg {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: url(/grunt/svgs/bg.svg);
-  background-size: 50px 50px;
-}
-
-/* line 1599, ../scss/breakpoints/_base.scss */
-#logo {
-  margin: 0.75em 0em;
-}
-/* line 1602, ../scss/breakpoints/_base.scss */
-#logo a {
-  color: #fff;
-}
-
-/*********************
 NAVIGATION STYLES
 *********************/
 /*
@@ -363,42 +243,9 @@ and more scalable.
   line-height: 35px;
 }
 
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-/* line 1766, ../scss/breakpoints/_base.scss */
-.byline {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0;
-}
-
-.entry-content {
-  padding-top: 0.5em;
-  padding-bottom: 3em;
-}
-
-.entry-content p {
-  margin: 0 0 1.5em;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 180px; /* Margin bottom by footer height */
-}
+/******************************************************************
+FOOTERS
+******************************************************************/
 
 .footer {
   position: absolute;
@@ -457,6 +304,136 @@ body {
   color: #4A90E2;
 }
 
+/******************************************************************
+LOGO AND ICON STYLES
+******************************************************************/
+
+/* line 1599, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0em;
+}
+/* line 1602, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
+}
+
+.icon-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/grunt/svgs/right_sm.svg);
+}
+
+.icon-download {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(/grunt/svgs/down.svg);
+}
+
+.icon-twitterbird_home {
+  display: inline-block;
+  width: 21px;
+  height: 19px;
+  background: url(/grunt/svgs/twitterbird.svg);
+  background-size: 100%;
+}
+
+.icon-bg {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(/grunt/svgs/bg.svg);
+  background-size: 50px 50px;
+}
+
+/* line 1599, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0em;
+}
+/* line 1602, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
+}
+
+/******************************************************************
+SECTIONS
+******************************************************************/
+
+/* line 1595, ../scss/breakpoints/_base.scss */
+.header {
+  border-top: 6px solid #4A90E2;
+}
+
+.entry-content {
+  padding-top: 0.5em;
+  padding-bottom: 3em;
+}
+
+.entry-content p {
+  margin: 0 0 1.5em;
+}
+
+.entry-content pre {
+  background: #323944;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+  font-family: monospace, serif;
+  font-size: 0.75em;
+}
+
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  border-top: 6px solid #4A90E2;
+  font-size: 18px;
+}
+
+.article-header {
+  padding-top: 2em;
+}
+
+.avatar {
+  float: right;
+  width: 30%;
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+}
+
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+
+.byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+.poster-card {
+  background-color: #EEE;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  zoom: 1;
+  cursor: pointer;
+}
+
+.project-card {
+  background-color: #EEE;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  zoom: 1;
+  cursor: pointer;
+}
+
 .page-article {
   padding-bottom: 4em;
 }
@@ -466,6 +443,7 @@ body {
   font-size: 24px;
   color: #4A4A4A;
   line-height: 30px;
+  border: 0;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -479,13 +457,63 @@ body {
   color: #FFFFFF;
 }
 
+.card-header .h3 {
+font-family: Kreon;
+font-weight: 700;
+font-size: 0.85em;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.card-body p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 500;
+  padding: 15px 15px 15px 15px;
+  margin: 0;
+  color: #4D4D4D;
+  -webkit-font-smoothing: antialiased;
+}
+
 .card-header {
-  display: block;
-  padding: 0em;
+  font-family: Kreon;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   text-align: center;
+  border: 0;
+  padding-bottom: 1em;
+  height: 60px;
+}
 
-  cursor: pointer;
+.card-footer {
+  text-align: center;
+  border: 0;
+  background-color: #EEE;
+}
 
-  border-radius: 7px;
-  transition: all 0.25s ease-out;
+/******************************************************************
+MEDIA QUERIES
+******************************************************************/
+
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name:
+  Author:
+
+  Stylesheet: Desktop Stylsheet
+
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+
+  ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1030up.scss */
+  .wrap {
+    width: 760px;
+  }
+
+  /* line 16, ../scss/breakpoints/_1030up.scss */
+  .wrap_nav {
+    max-width: 760px;
+    padding: 0px;
+  }
 }

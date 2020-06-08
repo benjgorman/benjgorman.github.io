@@ -15,11 +15,17 @@ tagline: Take a look at what I've been working on.
       </header>
       <hr>
     <section>
-      <div class="row wrap px-2">
-      {% for project in site.projects %}
-            {% include project_card.html %}
-      {% endfor %}
-      </div>
-    </section>
+    {% assign groups = site.projects | group_by: "category" %}
+        {% for group in groups %}
+        <h2>{{ group.name }} Projects</h2>
+        <div class="row wrap px-2">
+        {% for item in group.items reversed %}
+          {% include project_card.html %}
+        {%endfor%}
+        </div>
+        <hr>
+    {%endfor%}
+  </section>
+
   </section>
 </article>

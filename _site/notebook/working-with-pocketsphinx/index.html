@@ -48,16 +48,13 @@
       <div id="inner-content" class="wrap cf">
           <div id="main" role="main">
             <article>
-  <section class="entry-content cf" itemprop="articleBody">
-    <article>
-
+  <section class="entry-content wrap">
+    <article class="container wrap">
       <header class="article-header">
-      	<p>17 Aug 2015 - </p>
-        <h2>Converting .wav files for use with Pocketsphinx</h2>
-        </p>
+      	<p class="post-date">17 Aug 2015</p>
+        <h1 class="post-title">Converting .wav files for use with Pocketsphinx</h1>
       </header>
       <hr>
-    <section class="container wrap">
     	<p>When using <a href="http://cmusphinx.sourceforge.net/">Pocketsphinx</a>, you are required to have your audio data in a <strong>16kHz</strong> (or 8kHz, depending on the training data) <strong>16bit Mono</strong> (single channel) <strong>Little-Endian</strong> file. One way to do this is to export each file with Audacity but this is tiresome. However, Audacity is good for removing noise from a list of files using <a href="http://manual.audacityteam.org/o/man/edit_chains.html">chains</a>.</p>
 
 <p>Once we have done that we can use <a href="http://sox.sourceforge.net/">SoX</a> to take care of the rest. Here is a quick bash script I wrote which will do just that.</p>
@@ -102,9 +99,9 @@ done
 exit 0
 </code></pre></div></div>
 
-    </section>
   </section>
 </article>
+
             <div class="push"></div>
             </div>
           </div>

@@ -11,7 +11,7 @@ title: Home
   </p>
   </header>
   <section class="entry-content cf" itemprop="articleBody">
-    <div><img class="avatar" src="assets/images/Ben2018.jpeg"></div>
+    <div><img class="avatar" src="assets/images/Ben2018.jpeg" alt="An portrait image of Benjamin Gorman wearing a plaid shirt."></div>
     <article>
 
     <h1 class="headline">My name is Ben. I am a Lecturer in Computer Science at Bournemouth University, where I research Accessibility and HCI.</h1>
@@ -26,7 +26,12 @@ title: Home
       {% assign items = site.publications | sort: 'date' | reverse %}
       {% for item in items limit:3 %}
         <div class="row wrap ml-2 mr-2">
-          <a href="{{ item.url }}"><h3>{{ item.title }} - {{ item.venue }}</h3></a>
+          <h3 class="publication-header">
+            <a href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </h3>
+          <h4 class="publication-subheader">{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
         </div>
       {% endfor %}
     </div>

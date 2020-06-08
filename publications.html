@@ -20,12 +20,12 @@ tagline: Here is what I've been publishing.
           <h2>{{ group.name }}</h2>
           <div class="row wrap px-4">
           {% for item in group.items reversed %}
-          <h3>
+          <h3 class="publication-header">
             <a href="{{ item.url }}">
               {{ item.title }}
             </a>
           </h3>
-          <h4>{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
+          <h4 class="publication-subheader">{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
           {%endfor%}
           </div>
           <hr>

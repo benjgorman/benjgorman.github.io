@@ -2129,6 +2129,10 @@ h5, .h5 { font-size: 0.846em; line-height: 2.09em; text-transform: uppercase; le
 /* line 1583, ../scss/breakpoints/_base.scss */
 .post-date { font-family: Kreon; font-weight: 700; font-size: 16px; color: #4A90E2; line-height: 15px; }
 
+.publication-header { display: block; font-family: Kreon; font-size: 18px; color: #4A90E2; line-height: 21px; padding-bottom: 0em; width: 100%; }
+
+.publication-subheader { font-family: Kreon; font-size: 16px; color: #4A4A4A; line-height: 21px; line-height: 21px; padding-bottom: 1.5em; width: 100%; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -2236,13 +2240,15 @@ SECTIONS
 
 .page-article { padding-bottom: 4em; }
 
-.card-header-h2 { font-family: Kreon; font-size: 24px; color: #4A4A4A; line-height: 30px; border: 0; padding-top: 0.5em; padding-bottom: 0.5em; }
+.card-header-h2 { font-family: Kreon; font-size: 24px; color: #4A4A4A; border: 0; padding: 0; }
 
 .card-link { font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; color: #FFFFFF; }
 
 .card-header .h3 { font-family: Kreon; font-weight: 700; font-size: 0.85em; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
 
 .card-body p { font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 1.5em; font-weight: 500; padding: 15px 15px 15px 15px; margin: 0; color: #4D4D4D; -webkit-font-smoothing: antialiased; }
+
+.about-header { background-color: #4A90E2; }
 
 .card-header { font-family: Kreon; font-weight: 700; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); text-align: center; border: 0; padding-bottom: 1em; height: 60px; }
 

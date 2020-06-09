@@ -2094,7 +2094,7 @@ a:focus { text-shadow: 0 0 2px #999; }
 a:active { text-shadow: 0 0 2px #999; padding-top: 2px; }
 
 /* line 1504, ../scss/breakpoints/_base.scss */
-a, a:visited { color: #4A90E2; /* on hover */ /* on click */ /* mobile tap color */ }
+a, a:visited { color: #2275D3; /* on hover */ /* on click */ /* mobile tap color */ }
 
 /* line 1508, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus { color: #2378db; }
@@ -2118,7 +2118,7 @@ h1, .h1 { font-size: 2.5em; line-height: 1.333em; }
 h2, .h2 { font-family: Kreon; font-size: 24px; color: #4A4A4A; line-height: 30px; padding-top: 1em; padding-bottom: 1em; }
 
 /* line 1561, ../scss/breakpoints/_base.scss */
-h3, .h3 { font-family: Kreon; font-size: 18px; color: #4A90E2; line-height: 21px; padding-bottom: 1em; }
+h3, .h3 { font-family: Kreon; font-size: 18px; color: #2275D3; line-height: 21px; padding-bottom: 1em; }
 
 /* line 1569, ../scss/breakpoints/_base.scss */
 h4, .h4 { font-family: Kreon; font-size: 16px; color: #4A4A4A; line-height: 21px; }
@@ -2127,9 +2127,9 @@ h4, .h4 { font-family: Kreon; font-size: 16px; color: #4A4A4A; line-height: 21px
 h5, .h5 { font-size: 0.846em; line-height: 2.09em; text-transform: uppercase; letter-spacing: 2px; }
 
 /* line 1583, ../scss/breakpoints/_base.scss */
-.post-date { font-family: Kreon; font-weight: 700; font-size: 16px; color: #4A90E2; line-height: 15px; }
+.post-date { font-family: Kreon; font-weight: 700; font-size: 16px; color: #2275D3; line-height: 15px; }
 
-.publication-header { display: block; font-family: Kreon; font-size: 18px; color: #4A90E2; line-height: 21px; padding-bottom: 0em; width: 100%; }
+.publication-header { display: block; font-family: Kreon; font-size: 18px; color: #2275D3; line-height: 21px; padding-bottom: 0em; width: 100%; }
 
 .publication-subheader { font-family: Kreon; font-size: 16px; color: #4A4A4A; line-height: 21px; line-height: 21px; padding-bottom: 1.5em; width: 100%; }
 
@@ -2185,7 +2185,7 @@ FOOTERS
 .copyright { padding-top: 1em; font-size: 14px; font-family: Kreon; color: #4A4A4A; }
 
 /* line 89, ../scss/breakpoints/_base.scss */
-.copyright a:link { font-size: 14px; font-family: Kreon; color: #4A90E2; }
+.copyright a:link { font-size: 14px; font-family: Kreon; color: #2275D3; }
 
 /******************************************************************
 LOGO AND ICON STYLES
@@ -2214,7 +2214,7 @@ LOGO AND ICON STYLES
 SECTIONS
 ******************************************************************/
 /* line 1595, ../scss/breakpoints/_base.scss */
-.header { border-top: 6px solid #4A90E2; }
+.header { border-top: 6px solid #2275D3; }
 
 .entry-content { padding-top: 0.5em; padding-bottom: 3em; }
 
@@ -2224,7 +2224,7 @@ SECTIONS
 
 .entry-content img { max-width: 100%; height: auto; }
 
-.header { border-top: 6px solid #4A90E2; font-size: 18px; }
+.header { border-top: 6px solid #2275D3; font-size: 18px; }
 
 .article-header { padding-top: 2em; }
 
@@ -2252,7 +2252,7 @@ SECTIONS
 
 .card-body p { font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 1.5em; font-weight: 500; padding: 15px 15px 15px 15px; margin: 0; color: #4D4D4D; -webkit-font-smoothing: antialiased; }
 
-.about-header { background-color: #4A90E2; }
+.about-header { background-color: #2275D3; }
 
 .card-header { font-family: Kreon; font-weight: 700; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); text-align: center; border: 0; padding-bottom: 1em; height: 60px; }
 

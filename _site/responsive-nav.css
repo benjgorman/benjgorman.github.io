@@ -7,8 +7,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid #4A90E2;
-  border-top: 1px solid #4A90E2;
+  border-bottom: 1px solid #2275D3;
+  border-top: 1px solid #2275D3;
 }
 
 #newtoggle {
@@ -27,7 +27,7 @@
   padding:.5em 1em;
   width:100%;
   opacity: 0.8;
-background: #4A90E2;
+background: #2275D3;
 color: #FFFFFF;
 }
 
@@ -40,7 +40,7 @@ color: #FFFFFF;
       -moz-transition: opacity .4s ease-out;
       -webkit-transition: opacity .4s ease-out;
       -o-transition: opacity .4s ease-out;
-background: #4A90E2;
+background: #2275D3;
 color: #FFFFFF;
 
 }
@@ -92,7 +92,7 @@ color: #FFFFFF;
 
 
 
-  #logo_nav svg {
+#logo_nav svg {
 width:50px;
 height:50px;
 }
@@ -158,13 +158,13 @@ height:50px;
   padding:0em 0em;
     opacity: 1;
 background: none;
-color: #4A90E2;
+color: #2275D3;
 }
 
 
 .nav-collapse a:hover {
 opacity: 0.5;
-color: #4A90E2;
+color: #2275D3;
 background: none;
 text-decoration: none;
 padding:0em 0em;
@@ -178,7 +178,7 @@ padding:0em 0em;
 }
 
 .nav-collapse a:visited {
-color: #4A90E2;
+color: #2275D3;
 opacity: 0.5;
 background: none;
 text-decoration: none;
@@ -217,7 +217,7 @@ input[type='checkbox'] {
   padding: 1rem;
 
   color: #FFFFFF;
-  background: #4A90E2;
+  background: #2275D3;
 
   cursor: pointer;
 

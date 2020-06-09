@@ -2,6 +2,7 @@
 title: "ContextCueView"
 layout: project
 image: "/assets/images/project_images/ContextCueView_thumb.png"
+thumb_alt: "A starbucks employee is shown behind the counter. To the top right of the frame is a glancable text display showing some common phrases spoken inside a coffee shop."
 excerpt: "A concept of a contextual phrase book to aid speechreading."
 category: "Research"
 description: "In certain situations, phrases and topics can be pre-associated with a given location or situation. These associations can be shown using a constellation diagram, in which a text label for the situation is placed in the middle while related topics and phrases radiate out from the situation label. Constellation diagrams help by prompting the speechreader to consider potential phrases and topics in advance of a given situation.

@@ -1,6 +1,7 @@
 ---
 ---
 @import 'bootstrap/bootstrap';
+@import '_sass/_vars';
 
 /******************************************************************
 HTML BASIC ELEMENTS
@@ -78,7 +79,7 @@ a:active {
 
 /* line 1504, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #4A90E2;
+  color: $main-blue;
   /* on hover */
   /* on click */
   /* mobile tap color */
@@ -135,7 +136,7 @@ h2, .h2 {
 h3, .h3 {
   font-family: Kreon;
   font-size: 18px;
-  color: #4A90E2;
+  color: $main-blue;
   line-height: 21px;
   padding-bottom: 1em;
 }
@@ -161,7 +162,7 @@ h5, .h5 {
   font-family: Kreon;
   font-weight: 700;
   font-size: 16px;
-  color: #4A90E2;
+  color: $main-blue;
   line-height: 15px;
 }
 
@@ -169,7 +170,7 @@ h5, .h5 {
   display: block;
   font-family: Kreon;
   font-size: 18px;
-  color: #4A90E2;
+  color: $main-blue;
   line-height: 21px;
   padding-bottom: 0em;
   width:100%
@@ -319,7 +320,7 @@ FOOTERS
 .copyright a:link {
   font-size: 14px;
   font-family: Kreon;
-  color: #4A90E2;
+  color: $main-blue;
 }
 
 /******************************************************************
@@ -380,7 +381,7 @@ SECTIONS
 
 /* line 1595, ../scss/breakpoints/_base.scss */
 .header {
-  border-top: 6px solid #4A90E2;
+  border-top: 6px solid $main-blue;
 }
 
 .entry-content {
@@ -409,7 +410,7 @@ SECTIONS
 }
 
 .header {
-  border-top: 6px solid #4A90E2;
+  border-top: 6px solid $main-blue;
   font-size: 18px;
 }
 
@@ -507,7 +508,7 @@ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
 .about-header {
-  background-color: #4A90E2;
+  background-color: $main-blue;
 }
 
 .card-header {

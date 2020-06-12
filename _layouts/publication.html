@@ -7,7 +7,9 @@ layout: default
       <header class="article-header">
       	<p class="post-date">{{ page.date | date_to_string }}</p>
         <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-date">{{ page.authors }}, {{ page.venue }}, {{ page.year }}</p>
+        <p class="post-date">{{ page.authors }}</p>
+        <p class="post-date">{{ page.venue }}</p>
+        <p class="post-date">{{ page.year }}</p>
       </header>
       <hr>
       <section class="container wrap">
@@ -18,6 +20,8 @@ layout: default
       <section class="container wrap">
         {{ content }}
       </section>
-      <p><a href="{{ page.link }}">Read this on the ACM Digital Library</a><p>
+      {% if page.link %}
+        <p><a href="{{ page.link }}">Read This Publication</a><p>
+      {% endif %}
   </section>
 </article>

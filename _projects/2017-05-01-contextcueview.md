@@ -10,4 +10,7 @@ description: "In certain situations, phrases and topics can be pre-associated wi
 ContextCueView would gather contextual data (e.g., GPS, date/time) to anticipate a user’s situation. Using this contextual data, ContextCueView would load a matching previously- generated constellation diagram.
 
 ContextCueView could run on a mobile device and operate like a ‘contextual phrase book’, but it is also well-suited for a glanceable display."
+associated-publications:
+  framework-thesis: "A Framework for Speechreading Acquisition Tools (Thesis)"
 ---
+![ContextCueView](/assets/images/project_images/ContextCue.png)

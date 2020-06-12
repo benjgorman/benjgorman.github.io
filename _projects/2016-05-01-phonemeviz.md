@@ -11,7 +11,9 @@ PhonemeViz
 PhonemeViz can be overlaid onto video or displayed on a transparent head mounted display to augment natural speechreading and enhance speechreading acquisition.
 
 In a pilot evaluation of a PhonemeViz prototype it enabled all participants to achieve 100% word recognition (showing successful viseme disambiguation)"
+associated-publications:
+  viseme-sigaccess: "Reducing viseme confusion in speech reading"
+  framework-thesis: "A Framework for Speechreading Acquisition Tools (Thesis)"
+collaborators:
+  - Dr David Flalta, University of Guelph
 ---
-## Associated Publications
-
-## Collborators

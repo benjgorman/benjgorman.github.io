@@ -5,7 +5,7 @@ layout: default
   <section class="entry-content wrap">
     <article class="container wrap">
       <header class="article-header">
-      	<p class="post-date">{{ page.date | date_to_string }}</p>
+      	<p class="post-date">{{ page.date | date: "%Y"}}</p>
         <h1 class="post-title">{{ page.title }}</h1>
       </header>
       <hr>
@@ -16,6 +16,25 @@ layout: default
       <hr>
       <section class="container wrap">
         {{ content }}
+
+        {% if page.associated-publications %}
+        <h2>Associated Publications</h2>
+        <ul>
+          {% for item in page.associated-publications %}
+            <li><a href="/publications/{{ item[0] }}">{{ item[1] }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if page.collaborators %}
+        <h2>Collaborators</h2>
+        <ul>
+          {% for item in page.collaborators %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
       </section>
   </section>
 </article>

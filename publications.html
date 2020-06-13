@@ -34,7 +34,7 @@ tagline: Here is what I've been publishing.
     <section>
     <h2>Posters</h2>
     <div class="row wrap px-2">
-    {% for poster in site.posters %}
+    {% for poster in site.posters reversed %}
           {% include poster_card.html %}
       {% endfor %}
     </div>

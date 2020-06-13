@@ -1,9 +1,24 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Benjamin Gorman" 
+url: "https://benjgorman.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+title: "Benjamin Gorman"
+tagline: "Personal website of Benjamin Gorman"
+description: "Benjamin Gorman is a Lecturer in Computer Science at Bournemouth University. Here you can learn about his research and teaching activities."
+twitter:
+  username: benjgorman
+  card: summary
+social:
+  name: Benjamin Gorman
+  links:
+    https://twitter.com/benjgorman
+    https://www.linkedin.com/in/benjamin-m-gorman/
+    https://www.instagram.com/benjgorman
+    https://github.com/benjgorman
 sass:
   sass_dir: assets/css
 permalink: /:categories/:title/
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 collections:
   projects:
     output: true

@@ -19,6 +19,7 @@ permalink: /:categories/:title/
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 collections:
   projects:
     output: true

@@ -20,6 +20,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jemoji
 collections:
   projects:
     output: true

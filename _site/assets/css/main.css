@@ -2075,6 +2075,12 @@ body { margin-bottom: 180px; /* Margin bottom by footer height */ }
 
 .wrap { width: 100%; margin: 0 auto; }
 
+blockquote { background: #f9f9f9; margin: 1.5em 10px; padding: 0.5em 10px; text-align: center; }
+
+blockquote:before { color: #ccc; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+
+blockquote p { display: inline; }
+
 /*********************
 LINK STYLES
 *********************/

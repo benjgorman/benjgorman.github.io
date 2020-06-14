@@ -9,4 +9,5 @@ gem "jekyll"
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem 'jekyll-redirect-from'
+gem 'jemoji'
 # gem "rails"

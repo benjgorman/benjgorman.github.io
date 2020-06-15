@@ -16,7 +16,7 @@ The review timeline changes slightly each year, but the important dates for reb
 
 - **Reviews sent to authors:** November 15, 2019 at 12pm (noon) PST / 3pm EST / 8pm GMT.
 - **Rebuttal period closes:** November 22, 2019 at 22:00 ET.  
-    
+
 
 This only gives you **five working days** to: read your reviews, swear at R2, cry a little into a wine glass, and of course write, review and submit your rebuttal. Not a lot of time to process the feedback and work out a plan of attack. Below I've written how I approach reviews and rebuttals in general in case it helps.
 
@@ -119,7 +119,7 @@ Ok. So I've covered my process in more detail than I originally intended to, but
 3. Collate the points raised (by coding the data set).
 4. Prioritise the points (draw a line at major vs minor points).
 5. Draft a response to each point (and get a second reader).  
-    
+
 6. Focus on the formatting (and cut to the character limit).
 7. Submit and know it's now out of your hands!
 

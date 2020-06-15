@@ -12,7 +12,7 @@ associated-publications:
 collaborators:
   - Dr David Flalta, University of Guelph
 ---
-### This presentation was recorded at CHI 2018 in Montreal, Canada.
+## Video Presentation
 
 <iframe class="wrap" width="560" height="315" src="https://www.youtube.com/embed/ldKJsMhFbwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

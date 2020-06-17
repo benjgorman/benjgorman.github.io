@@ -13,8 +13,7 @@ collaborators:
   - Dr David Flalta, University of Guelph
 ---
 ## Video Presentation
-
-<iframe class="wrap" width="560" height="315" src="https://www.youtube.com/embed/ldKJsMhFbwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <iframe class="wrap" width="560" height="315" src="https://www.youtube.com/embed/ldKJsMhFbwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Image Gallery
 {% include image-gallery.html folder="/assets/images/project_images/mirrormirror-gallery" %}

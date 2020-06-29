@@ -28,6 +28,9 @@ collections:
   publications:
     output: true
     permalink: /:collection/:title
+  modules:
+    output: true
+    permalink: /:collection/:title
   posters:
     output: true
     permalink: /:collection/:title

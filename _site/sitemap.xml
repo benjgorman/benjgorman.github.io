@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/modules/physical-computing</loc>
+<lastmod>2017-05-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/modules/ubiquitous-computing</loc>
+<lastmod>2019-05-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/modules/accessility</loc>
+<lastmod>2020-05-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/modules/user-centred-web-development</loc>
+<lastmod>2020-05-01T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/posters/sicsa-all-hands</loc>
 <lastmod>2014-10-01T00:00:00+01:00</lastmod>
 </url>

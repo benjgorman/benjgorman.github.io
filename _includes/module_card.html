@@ -1,13 +1,9 @@
-<div class="col-sm-4 col-md-4 pb-4 pt-2">
-<a href="{{ item.url }}">
-<div class="card project-card h-100">
-  <h3 class="card-header align-middle">{{ item.title }}</h3>
-  <img class="card-img-top" src="{{ item.image }}" alt="{{ item.thumb_alt }}">
-  <div class="card-body mx-2 p-0">
+<div class="row pb-4 pt-2">
+  <div class="col-4">
+    <img class="card-img-top" src="{{ item.image }}" alt="{{ item.thumb_alt }}">
   </div>
-  <div class="card-footer">
-    <div class="icon-arrow" data-grunticon-embed></div>
+  <div class="col-8">
+    {{ item.title }}
+    {{ item.excerpt }}
   </div>
-</div>
-</a>
 </div>

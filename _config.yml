@@ -22,6 +22,9 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 collections:
+  units:
+    output: true
+    permalink: /:collection/:title
   projects:
     output: true
     permalink: /:collection/:title

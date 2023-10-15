@@ -13,9 +13,9 @@ title: Home
     <div><img class="avatar" src="assets/images/Ben2018.jpeg" alt="An portrait image of Benjamin Gorman wearing a plaid shirt."></div>
     <article>
 
-    <h1 class="headline">My name is Ben. I am a Lecturer in Computer Science at Bournemouth University, where I research Accessibility and HCI.</h1>
+    <h1 class="headline">My name is Ben. </br> I am a Senior Lecturer in Computer Science at <a title="Bournemouth University" href="http://bournemouth.ac.uk">Bournemouth University</a>, where I research Accessibility and HCI.</h1>
 
-    <a title="You should follow me on Twitter" href="http://twitter.com/benjgorman">You should follow me on Twitter
+    <a title="You should follow me on Twitter" href="http://twitter.com/benjgorman">You should follow me on X (Twitter)
     <div class="icon-twitterbird_home" data-grunticon-embed></div></a>
 
     </article>
@@ -31,17 +31,6 @@ title: Home
             </a>
           </h3>
           <h4 class="publication-subheader">{{ item.authors }}, {{ item.venue }}, {{ item.year-published }}</h4>
-        </div>
-      {% endfor %}
-    </div>
-
-    <h2>Recent Articles</h2>
-
-    <div class="row wrap">
-      {% for post in site.posts limit: 3 %}
-      <div class="row wrap ml-2 mr-2">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt }}</p>
         </div>
       {% endfor %}
     </div>

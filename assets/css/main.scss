@@ -572,3 +572,109 @@ MEDIA QUERIES
     padding: 0px;
   }
 }
+
+.cta-bar {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  margin: 1.4em 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.55em 1.1em;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #0b66ff;
+  transition: 0.25s ease;
+}
+
+/* Primary – soft border, soft BG */
+.cta-primary {
+  background: #eaf2ff;
+  color: #0b4fd6;
+}
+
+.cta-primary:hover {
+  background: #444e60;
+  color: #eaf2ff;
+  border-color: #0846af;
+}
+.cta-primary:visited {
+  color: #0b4fd6;        /* Blue text – confirmed */
+}
+.cta-primary:hover:visited {
+  color: #eaf2ff;        /* Light text – confirmed */
+}
+
+
+/* Secondary – INVERSE CTA */
+.cta-secondary {
+  background: #0b66ff;   /* Blue */
+  color: #ffffff;        /* White text – confirmed */
+  border-color: #0b66ff;
+}
+
+.cta-secondary:visited {
+  color: #ffffff;        /* White text – confirmed */
+}
+
+.cta-secondary:hover {
+  background: #ffffff;
+  border-color: #063ea1;
+  color: #0b66ff;        /* stays white on hover */
+}
+
+.teardown-options {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 3rem 0;
+}
+
+.option-card {
+  border: 1px solid #e3e3e3;
+  padding: 2rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.option-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.option-card ul {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.option-card ul li {
+  margin-bottom: .3rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.cta {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: .9rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  background: #0057ff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta.secondary {
+  background: #111;
+}

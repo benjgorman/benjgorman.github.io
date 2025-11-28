@@ -187,6 +187,9 @@
 <loc>http://localhost:4000/consultancy/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/consultation-call/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -203,6 +206,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/teaching/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/ux-teardown/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/files/Benjamin_GormanCV_2020.pdf</loc>

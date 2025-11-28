@@ -1,5 +1,6 @@
 ---
 title: "ContextCueView"
+date: 2017-05-01
 layout: project
 image: "/assets/images/project_images/ContextCueView_thumb.png"
 thumb_alt: "A starbucks employee is shown behind the counter. To the top right of the frame is a glancable text display showing some common phrases spoken inside a coffee shop."

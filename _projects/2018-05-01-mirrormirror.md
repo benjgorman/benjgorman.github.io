@@ -1,6 +1,7 @@
 ---
 title: "Mirror Mirror"
 layout: project
+date: 2018-03-01
 image: "/assets/images/project_images/MirrorMirror-1.png"
 thumb_alt: "Screenshots of the MirrorMirror mobile application"
 excerpt: "An android app which helps you practice speechreading."

@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2020-05-01
 image: "/assets/images/project_images/emoji-thumbnail.png"
 thumb_alt: "Two tweets are shown both contain various emoji."
 excerpt: How accessible are emoji for people with visual impairments?

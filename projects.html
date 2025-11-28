@@ -3,6 +3,9 @@ layout: default
 title: Projects
 tagline: Take a look at what I've been working on.
 ---
+
+{% assign sorted_projects = site.projects | sort: "date" | reverse %}
+
 <article>
   <section class="entry-content cf" itemprop="articleBody">
     <article>
@@ -17,7 +20,7 @@ tagline: Take a look at what I've been working on.
       <!-- Research Projects -->
       <h2>Research Projects</h2>
       <div class="row wrap px-2">
-        {% for item in site.projects %}
+        {% for item in sorted_projects %}
           {% if item.category == "Research Projects" %}
             {% include project_card.html %}
           {% endif %}
@@ -28,7 +31,7 @@ tagline: Take a look at what I've been working on.
       <!-- Personal Projects -->
       <h2>Personal Projects</h2>
       <div class="row wrap px-2">
-        {% for item in site.projects %}
+        {% for item in sorted_projects %}
           {% if item.category == "Personal Projects" %}
             {% include project_card.html %}
           {% endif %}
@@ -39,7 +42,7 @@ tagline: Take a look at what I've been working on.
       <!-- PhD Research Projects -->
       <h2>PhD Research Projects</h2>
       <div class="row wrap px-2">
-        {% for item in site.projects %}
+        {% for item in sorted_projects %}
           {% if item.category == "PhD Research Projects" %}
             {% include project_card.html %}
           {% endif %}
@@ -50,7 +53,7 @@ tagline: Take a look at what I've been working on.
       <!-- Art -->
       <h2>Art</h2>
       <div class="row wrap px-2">
-        {% for item in site.projects %}
+        {% for item in sorted_projects %}
           {% if item.category == "Art" %}
             {% include project_card.html %}
           {% endif %}

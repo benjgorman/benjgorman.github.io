@@ -1,5 +1,6 @@
 ---
 title: "PhonemeViz"
+date: 2016-05-01
 layout: project
 image: "/assets/images/project_images/PhonemeViz.png"
 thumb_alt: "An image looking from a point of view showing VR glasses projecting the letter B next to a womans lips."

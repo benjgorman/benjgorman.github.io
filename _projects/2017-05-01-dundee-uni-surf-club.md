@@ -1,6 +1,7 @@
 ---
 title: "Dundee University Surf Club Logo"
 layout: project
+date: 2017-05-01
 image: "/assets/images/project_images/SurfClub.png"
 thumb_alt: "A sports club style emblem, with a surf board motive overlaid over a landscape of Dundee."
 excerpt: "Logo created for Dundee University Surf Club."

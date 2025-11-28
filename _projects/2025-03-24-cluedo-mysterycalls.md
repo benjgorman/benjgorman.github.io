@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2025-03-04
 image: "/assets/images/project_images/cluedo-calls-thumb.png"
 thumb_alt: ""
 excerpt: "An AI-driven Cluedo experience built around real phone interrogation, voice-acted suspects, and evidence-based deduction."

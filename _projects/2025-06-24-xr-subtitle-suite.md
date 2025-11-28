@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2025-06-24
 image: "/assets/images/project_images/xr-network-thumb.png"
 thumb_alt: "XR Subtitle Suite visual mockup"
 excerpt: "Exploring the creative potential of subtitle data for virtual production — from media segmentation to graphic-novel rendering and sentiment-driven styling."

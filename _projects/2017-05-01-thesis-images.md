@@ -1,6 +1,7 @@
 ---
 title: "Hearing Related Thesis Images"
 layout: project
+date: 2017-05-01
 image: "/assets/images/project_images/ThesisImages.png"
 thumb_alt: "A stylised drawing of a hearing aid."
 excerpt: "Images created for my thesis."

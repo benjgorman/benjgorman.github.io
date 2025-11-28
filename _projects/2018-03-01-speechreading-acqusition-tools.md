@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2018-03-01
 image: "/assets/images/project_images/Framework.png"
 thumb_alt: "A framework is shown containing a variety of different speechreading tools."
 excerpt: "A framework to design tools to help with speechreading."

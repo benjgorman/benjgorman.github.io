@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>VisAural: A Tool for Converting Audible Signals into Visual Cues | Benjamin Gorman</title>
+    <title>Adaptive Subtitles | Benjamin Gorman</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,22 +17,24 @@
 </script>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>VisAural: A Tool for Converting Audible Signals into Visual Cues | Benjamin Gorman</title>
+<title>Adaptive Subtitles | Benjamin Gorman</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="VisAural: A Tool for Converting Audible Signals into Visual Cues" />
+<meta property="og:title" content="Adaptive Subtitles" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Benjamin Gorman is a Lecturer in Computer Science at Bournemouth University. Here you can learn about his research and teaching activities." />
-<meta property="og:description" content="Benjamin Gorman is a Lecturer in Computer Science at Bournemouth University. Here you can learn about his research and teaching activities." />
-<link rel="canonical" href="http://localhost:4000/publications/visaural-aaworkshop" />
-<meta property="og:url" content="http://localhost:4000/publications/visaural-aaworkshop" />
+<meta name="description" content="A study exploring how audiences personalise subtitle visibility in real-time. Through survey analysis and prototype evaluation, the research identifies how adaptive, speaker-selective subtitles can improve engagement and reduce distraction." />
+<meta property="og:description" content="A study exploring how audiences personalise subtitle visibility in real-time. Through survey analysis and prototype evaluation, the research identifies how adaptive, speaker-selective subtitles can improve engagement and reduce distraction." />
+<link rel="canonical" href="http://localhost:4000/projects/adaptive-subtitles" />
+<meta property="og:url" content="http://localhost:4000/projects/adaptive-subtitles" />
 <meta property="og:site_name" content="Benjamin Gorman" />
+<meta property="og:image" content="http://localhost:4000/assets/images/project_images/adaptive-subs-thumb.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2014-04-01T00:00:00+01:00" />
+<meta property="article:published_time" content="2021-05-01T00:00:00+01:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="VisAural: A Tool for Converting Audible Signals into Visual Cues" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/project_images/adaptive-subs-thumb.png" />
+<meta property="twitter:title" content="Adaptive Subtitles" />
 <meta name="twitter:site" content="@benjgorman" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2014-04-01T00:00:00+01:00","datePublished":"2014-04-01T00:00:00+01:00","description":"Benjamin Gorman is a Lecturer in Computer Science at Bournemouth University. Here you can learn about his research and teaching activities.","headline":"VisAural: A Tool for Converting Audible Signals into Visual Cues","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/visaural-aaworkshop"},"url":"http://localhost:4000/publications/visaural-aaworkshop"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-05-01T00:00:00+01:00","datePublished":"2021-05-01T00:00:00+01:00","description":"A study exploring how audiences personalise subtitle visibility in real-time. Through survey analysis and prototype evaluation, the research identifies how adaptive, speaker-selective subtitles can improve engagement and reduce distraction.","headline":"Adaptive Subtitles","image":"http://localhost:4000/assets/images/project_images/adaptive-subs-thumb.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/adaptive-subtitles"},"url":"http://localhost:4000/projects/adaptive-subtitles"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -81,23 +83,122 @@
   <section class="entry-content wrap">
     <article class="container wrap">
       <header class="article-header">
-      	<p class="post-date">01 Apr 2014</p>
-        <h1 class="post-title">VisAural: A Tool for Converting Audible Signals into Visual Cues</h1>
-        <p class="post-date">Benjamin M. Gorman and David R. Flatla</p>
-        <p class="post-date">Assistive Augmentation 2014, CHI 2014, Toronto, Canada</p>
-        <p class="post-date"></p>
+      	<p class="post-date">2021</p>
+        <h1 class="post-title">Adaptive Subtitles</h1>
       </header>
       <hr>
       <section class="container wrap">
-        <h2>Abstract</h2>
-        <p>Although our senses of hearing, smell, and vision allow us to sense things at a distance, the detection of many day-to-day events relies exclusively on our sense of hearing. For example, finding a ringing phone lost in a sofa, hearing a child cry in an- other room, locating a dripping tap, and using our car alarm to pinpoint the location of our vehicle in a car park are all initiated by audible signals. However, individuals with total or partial hearing loss have difficulty detecting the audible signals that the rest of the population relies on in these situations. To address this, we are developing VisAural, a system that converts audible signals into visual cues. Using an array of head-mounted microphones, VisAural detects the direction of a sound, and uses visually-peripheral LEDs to guide the user to the source of the sound.</p>
+        <h2>Description</h2>
+        <p>A study exploring how audiences personalise subtitle visibility in real-time. Through survey analysis and prototype evaluation, the research identifies how adaptive, speaker-selective subtitles can improve engagement and reduce distraction.</p>
       </section>
       <hr>
       <section class="container wrap">
+
+        <h1 id="adaptive-subtitles--real-time-control-for-better-viewing-experiences">Adaptive Subtitles – Real-Time Control for Better Viewing Experiences</h1>
+
+<p>Subtitles are widely used to improve comprehension of media. They support language learning, assist people with hearing differences, and counter noisy viewing environments. Yet, subtitles can also divide attention. Some viewers report distraction, reduced immersion, or fatigue when reading while watching — suggesting that subtitles work best when they match individual preference, context, and cognitive load.</p>
+
+<p>This project investigated how audiences currently use subtitles and what challenges they face. The research focused particularly on the idea of <strong>personalisation</strong>, exploring how giving viewers real-time control over subtitle visibility — down to the level of individual speakers — might improve both accessibility and enjoyment.</p>
+
+<hr />
+
+<h2 id="why-explore-personalised-subtitle-control">Why Explore Personalised Subtitle Control?</h2>
+
+<p>Viewers differ in how they consume media:</p>
+
+<ul>
+  <li>some need constant subtitles for clarity</li>
+  <li>others only use them selectively</li>
+  <li>many switch them on or off depending on environment</li>
+  <li>some prefer visual focus over reading</li>
+  <li>multilingual viewers may need subtitles for certain characters or accents</li>
+</ul>
+
+<p>Traditional subtitle systems offer binary choice: <strong>all subtitles or none</strong>. We hypothesised that more granular control could create a better balance between readability and immersion.</p>
+
+<hr />
+
+<h2 id="study-design">Study Design</h2>
+
+<p>The research was conducted in two main phases:</p>
+
+<h3 id="1-online-questionnaire--102-participants">1. Online Questionnaire – 102 Participants</h3>
+
+<p>The survey explored:</p>
+
+<ul>
+  <li>when and why people enable subtitles</li>
+  <li>perceived benefits in comprehension</li>
+  <li>perceived drawbacks including distraction</li>
+  <li>preferences for control and customisation</li>
+</ul>
+
+<p>These findings formed the design requirements for a new adaptive approach.</p>
+
+<h3 id="2-prototype-evaluation--19-participants">2. Prototype Evaluation – 19 Participants</h3>
+
+<p>We then developed <strong>Adaptive Subtitles</strong>, a real-time interface where viewers can enable or disable subtitles on a per-speaker basis while watching. Participants used the prototype to explore:</p>
+
+<ul>
+  <li>interaction trade-offs</li>
+  <li>cognitive load vs clarity</li>
+  <li>comfort and usability over time</li>
+</ul>
+
+<p>The study assessed whether dynamic control helped viewers feel more in command of their viewing experience.</p>
+
+<hr />
+
+<h2 id="key-findings">Key Findings</h2>
+
+<p>The evaluation revealed several insights.</p>
+
+<ul>
+  <li>
+    <p><strong>Personalisation improved viewing enjoyment</strong><br />
+Participants reported that being able to limit subtitles to specific characters reduced screen clutter and helped focus attention.</p>
+  </li>
+  <li>
+    <p><strong>Granular control supported cognitive balance</strong><br />
+Viewers toggled subtitles strategically — enabling them for complex dialogue, unfamiliar accents, or key plot revelations.</p>
+  </li>
+  <li>
+    <p><strong>Structured onboarding was crucial</strong><br />
+Clear guidance helped viewers understand the benefit of selective control and prevented overload from too many options.</p>
+  </li>
+  <li>
+    <p><strong>Trade-offs were accepted when transparent</strong><br />
+When the system made benefits and limitations visible, participants were more confident in adapting subtitles dynamically.</p>
+  </li>
+</ul>
+
+<p>Overall, the study demonstrated that <strong>real-time adaptive subtitles can improve viewing experiences when supported by thoughtful interaction design and guided user onboarding</strong>.</p>
+
+<hr />
+
+<h2 id="implications--future-work">Implications &amp; Future Work</h2>
+
+<p>This research suggests new directions for media accessibility and content personalisation:</p>
+
+<ul>
+  <li>context-aware subtitles that adapt automatically</li>
+  <li>profiles for focus, accessibility, education, or multi-language viewing</li>
+  <li>real-time speaker highlighting for group scenes</li>
+  <li>emotion-aware or scene-aware subtitle behaviour</li>
+  <li>integration into streaming platforms and VP environments</li>
+</ul>
+
+<p>Personalisation signals an evolution in how audiences interact with media — not just as passive viewers, but as agents tailoring content to their preferences, needs, and contexts.</p>
+
+<hr />
+
+<p>Adaptive Subtitles contributes to ongoing research into viewer-centred accessibility design, emphasising control, clarity, and intentional choice as core elements of better media engagement.</p>
+
+
         
 
+        
       </section>
-      
   </section>
 </article>
 

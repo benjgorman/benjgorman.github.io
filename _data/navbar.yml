@@ -1,7 +1,7 @@
 - name: Home
   link: /
-- name: Notebook
-  link: /notebook
+- name: Consultancy
+  link: /consultancy
 - name: Projects
   link: /projects
 - name: Publications

@@ -4,7 +4,7 @@ layout: project
 image: "/assets/images/project_images/PhonemeViz.png"
 thumb_alt: "An image looking from a point of view showing VR glasses projecting the letter B next to a womans lips."
 excerpt: "A visualisation to improve speechreading."
-category: "Research"
+category: "Conceptual Research"
 description: "PhonemeViz places the character(s) of the most recently spoken initial phoneme just to the side of a speaker’s lips. This design should enable a speechreader to focus on the speaker’s eyes and lip movements (as in traditional speechreading), while also monitoring changes in PhonemeViz’s state using their peripheral vision to help disambiguate confusing visemes.
 PhonemeViz
 

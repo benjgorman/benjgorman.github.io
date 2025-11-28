@@ -3,7 +3,7 @@ layout: project
 image: "/assets/images/project_images/xr-network-thumb.png"
 thumb_alt: "XR Subtitle Suite visual mockup"
 excerpt: "Exploring the creative potential of subtitle data for virtual production — from media segmentation to graphic-novel rendering and sentiment-driven styling."
-category: "Research"
+category: "Research Projects"
 description: "A research collaboration between Bournemouth University, University of Dundee, and ITV, supported by XR Network+, resulting in three working prototype tools that repurpose subtitle data for Virtual Production workflows."
 ---
 

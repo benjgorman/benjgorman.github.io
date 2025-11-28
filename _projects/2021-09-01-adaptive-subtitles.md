@@ -3,7 +3,7 @@ layout: project
 image: "/assets/images/project_images/adaptive-subs-thumb.png"
 thumb_alt: "Adaptive Subtitles interface mockup"
 excerpt: "Investigating how real-time control over subtitles affects viewer experience, understanding, and accessibility."
-category: "Research"
+category: "Research Projects"
 description: "A study exploring how audiences personalise subtitle visibility in real-time. Through survey analysis and prototype evaluation, the research identifies how adaptive, speaker-selective subtitles can improve engagement and reduce distraction."
 ---
 

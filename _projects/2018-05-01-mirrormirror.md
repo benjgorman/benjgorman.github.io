@@ -4,7 +4,7 @@ layout: project
 image: "/assets/images/project_images/MirrorMirror-1.png"
 thumb_alt: "Screenshots of the MirrorMirror mobile application"
 excerpt: "An android app which helps you practice speechreading."
-category: "PhD Research Projects"
+category: "Research Projects"
 description: "MirrorMirror allow speechreaders to capture and store videos of speech movements and words in a “lipshape library”. Users could gather coded videos of friends and family, allowing them to practice speechreading on those they speak with most."
 associated-publications:
   mirrormirror: "MirrorMirror: A Mobile Application to Improve Speechreading Acquisition"

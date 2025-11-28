@@ -1,6 +1,7 @@
 ---
 layout: project
 date: 2021-05-01
+title: "Adaptive Subtitles"
 image: "/assets/images/project_images/adaptive-subs-thumb.png"
 thumb_alt: "Adaptive Subtitles interface mockup"
 excerpt: "Investigating how real-time control over subtitles affects viewer experience, understanding, and accessibility."

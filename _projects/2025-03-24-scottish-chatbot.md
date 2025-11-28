@@ -1,6 +1,7 @@
 ---
 layout: project
 date: 2025-03-04
+title: "Scottish Pal Chatbot"
 image: "/assets/images/project_images/scottish-pal-thumb.png"
 thumb_alt: ""
 excerpt: "A React/Express Scottish chatbot, originally a teaching demo for a software engineering unit, expanded into a characterful conversational experience."

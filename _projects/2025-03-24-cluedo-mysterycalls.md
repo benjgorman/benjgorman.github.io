@@ -1,6 +1,7 @@
 ---
 layout: project
 date: 2025-03-04
+title: "Cluedo Mystery Calls"
 image: "/assets/images/project_images/cluedo-calls-thumb.png"
 thumb_alt: ""
 excerpt: "An AI-driven Cluedo experience built around real phone interrogation, voice-acted suspects, and evidence-based deduction."
@@ -8,7 +9,7 @@ category: "Personal Projects"
 description: "A modern reinterpretation of Cluedo built during BU C&I Research Week. Players interrogate suspects via Bland.AI voice calls, review evidence, and solve a timed murder mystery — demonstrating rapid prototyping with AI code assistance."
 ---
 
-# Cluedo Calls – AI-Powered Murder Mystery
+# Cluedo Mystery Calls – AI-Powered Murder Mystery
 
 During BU C&I Research Week, students were developing projects using Bland.AI voice technology. Several had previously expressed interest in seeing how staff would approach a similar challenge. This became the motivation for building **Cluedo Calls** — a browser-based murder mystery where the suspects are not just cards or static characters, but **voice-responsive AI personalities you can call on your phone**.
 

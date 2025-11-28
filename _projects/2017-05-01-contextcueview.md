@@ -1,5 +1,5 @@
 ---
-title: "ContextCueView"
+title: "Context Cue View"
 date: 2017-05-01
 layout: project
 image: "/assets/images/project_images/ContextCueView_thumb.png"

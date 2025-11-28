@@ -3,7 +3,7 @@ layout: project
 image: "/assets/images/project_images/cluedo-calls-thumb.png"
 thumb_alt: ""
 excerpt: "An AI-driven Cluedo experience built around real phone interrogation, voice-acted suspects, and evidence-based deduction."
-category: "Research"
+category: "Personal"
 description: "A modern reinterpretation of Cluedo built during BU C&I Research Week. Players interrogate suspects via Bland.AI voice calls, review evidence, and solve a timed murder mystery — demonstrating rapid prototyping with AI code assistance."
 ---
 

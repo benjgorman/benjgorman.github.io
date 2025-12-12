@@ -20,6 +20,8 @@ The six-month project was supported by XR Network+ and aimed not only to enhance
 
 ---
 
+![XR Network](/assets/images/project_images/xr-network-thumb.png "XR Network")
+
 ## Why Subtitles?
 
 Subtitles are available for enormous volumes of broadcast media, yet their use is usually confined to linear display. This project asked a simple but transformative question:
@@ -28,10 +30,10 @@ Subtitles are available for enormous volumes of broadcast media, yet their use i
 
 By analysing dialogue structure, speaker turns, silence, pacing, sentiment, and contextual markers, subtitles can reveal:
 
-- who is speaking, how often, and with what emotional intent  
-- how scenes flow, break, accelerate, or centre around conflict  
-- where meaning is created through timing, rhythm, or contradiction  
-- opportunities for accessibility improvements, reduction, summarisation, and alternate viewing modes  
+- who is speaking, how often, and with what emotional intent
+- how scenes flow, break, accelerate, or centre around conflict
+- where meaning is created through timing, rhythm, or contradiction
+- opportunities for accessibility improvements, reduction, summarisation, and alternate viewing modes
 
 This shift in perspective opened up new workflows for VP teams, editors, researchers, and audience-facing experiences.
 
@@ -45,9 +47,9 @@ Each tool works independently but draws from the same subtitle data foundation. 
 
 A browser interface that allows users to divide and export media based on:
 
-- **Speaker** — e.g. all of one character's dialogue for training, analysis, or character-centred cuts  
-- **Chapters** — using structural metadata to isolate scenes or narrative beats  
-- **Time-based ranges** — rapidly extracting windows for review, summarisation, or short-form editing  
+- **Speaker** — e.g. all of one character's dialogue for training, analysis, or character-centred cuts
+- **Chapters** — using structural metadata to isolate scenes or narrative beats
+- **Time-based ranges** — rapidly extracting windows for review, summarisation, or short-form editing
 
 This makes it possible to generate themed edits, accessibility-first versions, or character-focused highlight reels in seconds, rather than manually.
 
@@ -55,9 +57,9 @@ This makes it possible to generate themed edits, accessibility-first versions, o
 
 This tool transforms video + subtitle data into **visual print artefacts**:
 
-- comic-style page layouts built from extracted video frames  
-- speech balloons generated directly from subtitle text  
-- automatic condensation of scenes into narrative summaries  
+- comic-style page layouts built from extracted video frames
+- speech balloons generated directly from subtitle text
+- automatic condensation of scenes into narrative summaries
 
 Designed not only for accessibility but for **media literacy, education, and creative reinterpretation**, it demonstrates how broadcast content can become visual storytelling material, teaching resource, or archival object.
 
@@ -65,9 +67,9 @@ Designed not only for accessibility but for **media literacy, education, and cre
 
 A more experimental prototype that uses subtitle data to infer:
 
-- emotional tone (anger, tension, calm, humour)  
-- character relationships and dynamics  
-- pacing changes, escalation, conflict  
+- emotional tone (anger, tension, calm, humour)
+- character relationships and dynamics
+- pacing changes, escalation, conflict
 
 Visual output changes dynamically — applying colour, composition, or motion effects that reflect mood. This tool tests how data-led rendering might one day allow automated editorial stylisation, mood summaries, or emotion-led narrative versions of broadcast media.
 
@@ -77,9 +79,9 @@ Visual output changes dynamically — applying colour, composition, or motion ef
 
 All three tools were evaluated through participant interviews with industry professionals and educators. Key findings included:
 
-- intuitive interfaces with low learning curves  
-- valuable potential for editorial, archive, and VP workflow integration  
-- applications for education, accessibility, and short-form content creation  
+- intuitive interfaces with low learning curves
+- valuable potential for editorial, archive, and VP workflow integration
+- applications for education, accessibility, and short-form content creation
 
 Feedback directly shaped the final refinements, confirming future development value across industry and research contexts.
 
@@ -91,13 +93,9 @@ Building on these prototypes, future research with ITV will explore how **struct
 
 There is clear opportunity to develop:
 
-- adaptive editing pipelines  
-- real-time narrative visualisation  
-- archive search + retrieval tools  
-- accessibility-first content transformations  
+- adaptive editing pipelines
+- real-time narrative visualisation
+- archive search + retrieval tools
+- accessibility-first content transformations
 
 ---
-
-This project is one of four funded through the XR Network+ PIA initiative, awarding up to £10,000 for UK research exploring new ideas in Virtual Production. Work began in September 2024 and concluded with three publicly demonstrable prototypes.
-
-Image credit: Benjamin Gorman.

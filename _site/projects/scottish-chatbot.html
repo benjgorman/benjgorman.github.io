@@ -94,151 +94,129 @@
       <hr>
       <section class="container wrap">
 
-        <h1 id="scottish-pal-chatbot--reactexpress-teaching-demo">Scottish Pal Chatbot – React/Express Teaching Demo</h1>
+        <p>This semantic based chatbot was created as a clear, approachable example for Level 5 Software Engineering students learning how a React front-end communicates with an Express back-end to power an AI-driven experience. Instead of a generic textbox-and-response interface, the demo centres on a friendly Scottish character who chats with students in real time.</p>
 
-<p>During BU C&amp;I teaching, students needed a concrete example of how a <strong>front-end React app</strong> could talk to a <strong>back-end Express server</strong> to create an AI-powered experience. Rather than yet another anonymous chat window, this became the motivation for building the <strong>Scottish Pal Chatbot</strong> — a browser-based interface where students message a friendly Scottish character and see live responses returned from an API.</p>
-
-<p>The core idea was to have an example that is <strong>simple enough to understand in a lecture</strong>, but rich enough that it can grow into a small project: new personalities, different prompt styles, and evolving UI features.</p>
-
-<p>The core question driving the work was simple.<br />
-<strong>If we wrapped a basic full-stack demo in a strong character and visual theme, would it become a more memorable and engaging teaching artefact?</strong></p>
+<p>The goal was to produce an example that is simple enough to teach in a lecture yet distinctive enough to feel like a small product. By giving the chatbot a defined persona and visual identity, the demonstration becomes more memorable and highlights how behaviour emerges from prompt design and system architecture.</p>
 
 <hr />
+
+<p><img src="/assets/images/project_images/scottish-pal-thumb.png" alt="Scottish Chatbot" title="Scottish Chatbot" /></p>
 
 <h2 id="why-build-this">Why Build This?</h2>
 
-<p>The project explored several teaching- and research-aligned themes:</p>
+<p>The project explores several pedagogical and technical themes.</p>
 
-<h3 id="reimagining-hello-world-chatbot-examples">Reimagining “hello world” chatbot examples</h3>
-<p>Most introductory chatbots are sterile: one text box, one response area. By adding a Scottish persona, custom styling, and playful copy, the example moves from “generic API wiring” to <strong>a small but vivid product</strong>. Students see that even trivial plumbing can feel different when coupled with tone, world-building, and microcopy.</p>
+<h3 id="making-introductory-chatbot-demos-more-meaningful">Making introductory chatbot demos more meaningful</h3>
 
-<h3 id="testing-rapid-prototyping-of-full-stack-patterns">Testing rapid prototyping of full-stack patterns</h3>
-<p>The app was initially built very quickly using <strong>React on the front end and Express on the back end</strong>, with AI APIs wired in as the final step. This allowed demonstrations of:</p>
+<p>Most “hello world” chatbot examples are minimal: a single input box and a plain text response. By adding a Scottish persona, themed UI elements, and playful copy, the example illustrates how even simple API wiring can become a small, coherent product. It encourages students to think about tone, world-building, and user experience in addition to basic functionality.</p>
+
+<h3 id="demonstrating-rapid-full-stack-prototyping">Demonstrating rapid full-stack prototyping</h3>
+
+<p>The application was assembled quickly using React on the client side and Express on the server side, with the AI integration layered in as a final step. This provides a transparent example of:</p>
+
 <ul>
-  <li>how requests move from UI → server → model → UI</li>
-  <li>where to add logging, validation, and simple routing</li>
-  <li>how to iterate on prompts and behaviour without rewriting architecture</li>
+  <li>how requests travel from the interface to the server and back</li>
+  <li>where validation, routing, and logging occur</li>
+  <li>how to iterate on prompts and behaviour without changing architecture</li>
 </ul>
 
-<p>It also became a space to talk about <strong>code generation tools</strong> (e.g. GitHub Copilot) as accelerants for boilerplate while keeping design decisions human-led.</p>
+<p><img src="/assets/images/project_images/scottish-chatbot-gif.gif" alt="Scottish Chatbot" title="Scottish Chatbot Gif" /></p>
 
-<h3 id="investigating-how-persona--prompt-design-shape-understanding">Investigating how persona &amp; prompt design shape understanding</h3>
-<p>Instead of treating responses as “right” or “wrong,” students experience how <strong>prompt wording and system instructions</strong> change the chatbot’s behaviour. The Scottish voice, occasional nonsense, and differences between API modes all become teaching hooks for:</p>
+<h3 id="exploring-persona-and-prompt-design">Exploring persona and prompt design</h3>
+
+<p>Students see firsthand how system instructions shape a chatbot’s responses. The Scottish persona, informal tone, occasional digressions, and variations between API modes all become teaching touchpoints for:</p>
+
 <ul>
-  <li>prompt engineering</li>
-  <li>controllability and constraints</li>
-  <li>expectations around hallucination and tone</li>
+  <li>simple topic-based semantic engineering</li>
+  <li>behavioural constraints</li>
+  <li>tone and voice</li>
+  <li>the limits and quirks of generative models</li>
 </ul>
 
 <hr />
 
-<h2 id="features-expanded">Features (Expanded)</h2>
+<h2 id="features">Features</h2>
 
 <ul>
   <li>
     <p><strong>Scottish persona chatbot</strong><br />
-The assistant speaks as a colloquial Scottish pal, mixing helpful explanations with characterful asides. This makes even basic questions (like simple maths) more engaging to test.</p>
+The assistant speaks in a colloquial Scottish voice, creating a distinct character that makes simple interactions more engaging.</p>
   </li>
   <li>
-    <p><strong>React-based chat interface</strong><br />
-A single-page app with a scrollable conversation pane, message input box, and send button. Messages are rendered as a dialogue between <em>You</em> and <em>Angus</em>, making the full request/response loop visible.</p>
+    <p><strong>React-based chat UI</strong><br />
+A single-page application with a scrollable conversation panel, input field, and send controls. The message history clearly displays exchanges between the user and the chatbot.</p>
   </li>
   <li>
-    <p><strong>Express back-end API</strong><br />
-A minimal Node/Express server exposes an endpoint for chat messages. It receives the user message, injects persona prompts and mode settings, calls the AI API, and returns the formatted reply.</p>
+    <p><strong>Express API back end</strong><br />
+A lightweight Node/Express server processes incoming messages, applies persona prompts, calls the AI model, and returns formatted replies.</p>
   </li>
   <li>
-    <p><strong>Legacy vs Advanced API modes</strong><br />
-A simple “Select API Mode” toggle lets students switch between different back-end configurations (for example, older vs newer models or different prompt styles) and observe how responses change.</p>
+    <p><strong>API mode switching</strong><br />
+A toggle allows students to move between different model configurations (e.g. legacy vs advanced modes), showing how behaviour changes across settings.</p>
   </li>
   <li>
-    <p><strong>Status and presence feedback</strong><br />
-A small footer indicator (e.g. <em>“Angus is: Around and ready!”</em>) gives a sense of presence and is an easy hook for teaching about loading states, health checks, and error handling.</p>
+    <p><strong>Status and presence indicators</strong><br />
+A small footer element communicates connection and loading state, demonstrating patterns for health checks and user feedback.</p>
   </li>
   <li>
-    <p><strong>Cohesive themed UI</strong><br />
-The interface uses a Scottish landscape backdrop, a friendly illustrated character, and clear typography to emphasise that even a teaching demo can have personality and polish.</p>
+    <p><strong>Themed interface</strong><br />
+Scottish-inspired visuals, a character illustration, and friendly microcopy reinforce the persona and demonstrate how UI identity affects user engagement.</p>
   </li>
 </ul>
 
 <hr />
 
-<h2 id="how-it-was-developed">How It Was Developed</h2>
+<h2 id="development-approach">Development Approach</h2>
 
-<h3 id="architecture--front-end">Architecture &amp; Front-End</h3>
+<h3 id="architecture-and-front-end">Architecture and Front End</h3>
 
-<p>The project uses <strong>React</strong>, chosen for its suitability in demonstrating component-based UIs and stateful interactions. Key elements include:</p>
-
-<ul>
-  <li>A main chat component handling:
-    <ul>
-      <li>local state for the message list</li>
-      <li>current input value</li>
-      <li>“sending” state while waiting for the server</li>
-    </ul>
-  </li>
-  <li>A message list area that renders user and bot messages with distinct styling</li>
-  <li>A mode selector component wired to the back-end via query parameters or headers</li>
-</ul>
-
-<p>This structure makes it easy for students to:</p>
-<ul>
-  <li>trace data flow</li>
-  <li>add new UI features (e.g. clear chat, multiple bots)</li>
-  <li>refactor components into a larger app.</li>
-</ul>
-
-<h3 id="styling--visual-identity">Styling &amp; Visual Identity</h3>
-
-<p>Styling was implemented with <strong>CSS (and/or utility-first classes)</strong> to keep things explicit for learners. The “Scottish Pal” aesthetic is achieved through:</p>
+<p>The front end uses <strong>React</strong>, structured to make data flow and component logic visible:</p>
 
 <ul>
-  <li>A two-tone, landscape-inspired background</li>
-  <li>A cartoon highland character anchored to the left of the screen</li>
-  <li>A dark, card-like chat panel in the centre that focuses attention on the conversation</li>
-  <li>Friendly microcopy (“Yer wee chatbot pal ready tae chat ower a wee dram!”) to reinforce theme</li>
+  <li>A main chat component handling local state, input, and loading indicators</li>
+  <li>A conversation renderer that differentiates user and bot messages</li>
+  <li>A mode selector component that updates server requests</li>
 </ul>
 
-<p>This gives a clear example that <strong>UI identity matters</strong>, even in otherwise basic demos.</p>
+<p>This modular structure allows students to extend the demo easily by adding new personalities, new UI features, or additional endpoints.</p>
 
-<h3 id="api-integration">API Integration</h3>
+<h3 id="visual-identity">Visual Identity</h3>
 
-<p>The Express server acts as a thin integration layer:</p>
+<p>Styling was kept intentionally transparent for teaching purposes, using standard CSS and utility classes. The aesthetic includes:</p>
 
 <ul>
-  <li>Receives POST requests from the React client with:
-    <ul>
-      <li>the latest user message</li>
-      <li>the chosen API mode (Legacy/Advanced)</li>
-    </ul>
-  </li>
-  <li>Builds a prompt that:
-    <ul>
-      <li>injects instructions about the Scottish persona</li>
-      <li>optionally constrains behaviour (e.g. respond with nonsense outside recognised commands)</li>
-    </ul>
-  </li>
-  <li>Sends that prompt to the configured AI model and returns the resulting text.</li>
+  <li>A landscape-inspired colour palette</li>
+  <li>A friendly illustrated character</li>
+  <li>A clean, card-style chat panel</li>
+  <li>Lightly themed microcopy to maintain tone</li>
 </ul>
 
-<p>Because all of this is visible and modifiable, students can experiment with:</p>
+<p>This reinforces that even basic examples benefit from clear design choices and consistent theming.</p>
+
+<h3 id="back-end-and-api-integration">Back-End and API Integration</h3>
+
+<p>The Express server functions as a straightforward integration layer:</p>
+
 <ul>
-  <li>system vs user prompts</li>
-  <li>stricter instructions vs open-ended chat</li>
-  <li>mapping different routes or endpoints to different personalities.</li>
+  <li>Accepts POST requests containing the user message and selected API mode</li>
+  <li>Constructs persona prompts and behaviour instructions</li>
+  <li>Sends the request to the chosen AI model</li>
+  <li>Returns a formatted response for display in the UI</li>
 </ul>
+
+<p>Because the logic is concise and readable, it becomes a useful starting point for teaching routing, middleware, environmental variables, and prompt iteration.</p>
 
 <h3 id="development-process">Development Process</h3>
 
-<p>Work on the project loosely followed these steps:</p>
+<p>The build progressed through:</p>
 
 <ol>
-  <li><strong>Scaffold the Express server and a minimal chat endpoint</strong></li>
-  <li><strong>Create a basic React front-end</strong> with an input, message list, and fetch logic</li>
-  <li><strong>Wire the two together</strong> and confirm end-to-end request/response on localhost</li>
-  <li><strong>Layer in the Scottish persona</strong> and custom instructions for behaviour</li>
-  <li><strong>Add API mode selection and status indicators</strong> so behaviour and state changes are visible</li>
-  <li><strong>Refine styling and microcopy</strong> to make the demo feel like a small, finished product rather than throwaway test code</li>
+  <li>Scaffolding the Express server and a basic chat endpoint</li>
+  <li>Creating a minimal React chat interface</li>
+  <li>Connecting the two for end-to-end communication</li>
+  <li>Adding the Scottish JSON \persona and shaping its behaviour</li>
+  <li>Introducing API mode selection and presence indicators</li>
+  <li>Refining UI styling and microcopy to give the demo character and coherence</li>
 </ol>
 
 <hr />
@@ -248,13 +226,13 @@ The interface uses a Scottish landscape backdrop, a friendly illustrated charact
 <ul>
   <li>Node.js (v16+)</li>
   <li>npm or yarn</li>
-  <li>An AI API key (e.g. OpenAI API) configured on the server side</li>
-  <li>Local environment set up to run both the React dev server and the Express back-end</li>
+  <li>Access to a suitable AI API (e.g., OpenAI) configured on the server</li>
+  <li>A local development environment running both the React dev server and Express back end</li>
 </ul>
 
 <hr />
 
-<p>This prototype demonstrates how even the simplest full-stack chatbot can become a <strong>memorable teaching artefact</strong> when wrapped in clear architecture, strong visual identity, and a playful persona. It doubles as both a lecture demo and a small sandbox for students to explore prompts, API integration, and front-end/back-end communication.</p>
+<p>This project demonstrates how a simple full-stack chatbot can become a <strong>memorable, instructive, and engaging teaching tool</strong> when combined with a coherent persona, clear architecture, and thoughtful prompt design. It functions both as a lecture exemplar and as a sandbox where students can explore front-end/back-end communication, system prompting, and iterative design.</p>
 
 
         

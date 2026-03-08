@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SongBird</title>
+
+  <!-- Put these files in the same folder as this HTML for offline use -->
+  <script src="p5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #game-wrap {
+      text-align: center;
+    }
+
+    canvas {
+      display: block;
+      border: 3px solid #222;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .help {
+      font-size: 14px;
+      opacity: 0.85;
+      max-width: 480px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+    
+  <div id="game-wrap">
+    <div class="help">
+      Click the game once, allow microphone access, then whistle / hum / make noise to rise.
+      Press <strong>R</strong> to restart.
+    </div>
+  </div>
+
+  <script>
+    let mic;
+    let bird;
+    let pipes = [];
+    let score = 0;
+    let gameOver = false;
+    let started = false;
+
+    const PIPE_INTERVAL = 120;
+    const GRAVITY = 0.45;
+    const MIC_THRESHOLD = 0.02;
+
+    let glideEnergy = 0;
+    const GLIDE_FILL = 22;
+    const GLIDE_DECAY = 0.94;
+    const GLIDE_LIFT = 0.35;
+
+    function setup() {
+      const canvas = createCanvas(480, 640);
+      canvas.parent("game-wrap");
+      textFont("Arial, sans-serif");
+
+      bird = new Bird();
+      pipes = [new Pipe()];
+    }
+
+    async function mousePressed() {
+      if (!started) {
+        await startMic();
+      }
+    }
+
+    async function keyPressed() {
+      if (!started) {
+        await startMic();
+      }
+
+      if (key === "r" || key === "R") {
+        resetGame();
+      }
+    }
+
+    async function startMic() {
+      try {
+        await userStartAudio();
+        mic = new p5.AudioIn();
+        await mic.start();
+        started = true;
+      } catch (err) {
+        console.error("Microphone start failed:", err);
+      }
+    }
+
+    function draw() {
+      background(135, 206, 235);
+      drawBackground();
+
+      if (!started) {
+        drawStartScreen();
+        bird.show();
+        return;
+      }
+
+      if (!gameOver) {
+        if (frameCount % PIPE_INTERVAL === 0) {
+          pipes.push(new Pipe());
+        }
+
+        let vol = mic ? mic.getLevel() : 0;
+
+        if (vol > MIC_THRESHOLD) {
+          glideEnergy += (vol - MIC_THRESHOLD) * GLIDE_FILL;
+        }
+
+        glideEnergy = constrain(glideEnergy, 0, 5);
+        glideEnergy *= GLIDE_DECAY;
+
+        bird.applyLift(glideEnergy * GLIDE_LIFT);
+        bird.update();
+        bird.show();
+
+        for (let i = pipes.length - 1; i >= 0; i--) {
+          pipes[i].update();
+          pipes[i].show();
+
+          if (pipes[i].hits(bird)) {
+            gameOver = true;
+          }
+
+          if (!pipes[i].passed && pipes[i].x + pipes[i].w < bird.x) {
+            pipes[i].passed = true;
+            score++;
+          }
+
+          if (pipes[i].offscreen()) {
+            pipes.splice(i, 1);
+          }
+        }
+
+        if (bird.y + bird.size / 2 >= height - 40 || bird.y - bird.size / 2 <= 0) {
+          gameOver = true;
+        }
+      } else {
+        bird.show();
+        for (let pipe of pipes) {
+          pipe.show();
+        }
+      }
+
+      drawHUD();
+    }
+
+    function resetGame() {
+      bird = new Bird();
+      pipes = [new Pipe()];
+      score = 0;
+      glideEnergy = 0;
+      gameOver = false;
+      frameCount = 0;
+    }
+
+    function drawBackground() {
+      fill(100, 200, 100);
+      rect(0, height - 40, width, 40);
+
+      noStroke();
+      fill(255, 255, 255, 180);
+      ellipse(80, 100, 60, 40);
+      ellipse(110, 100, 50, 35);
+      ellipse(300, 150, 70, 45);
+      ellipse(335, 150, 55, 35);
+    }
+
+    function drawStartScreen() {
+      fill(0, 160);
+      rect(0, 0, width, height);
+
+      fill(255);
+      textAlign(CENTER, CENTER);
+
+      textSize(42);
+      text("SongBird", width / 2, height / 2 - 70);
+
+      textSize(18);
+      text("Click to start", width / 2, height / 2 - 10);
+      text("Allow microphone access", width / 2, height / 2 + 20);
+      text("Whistle / hum / make noise to fly", width / 2, height / 2 + 50);
+    }
+
+    function drawHUD() {
+      let vol = mic ? mic.getLevel() : 0;
+
+      fill(0);
+      textSize(28);
+      textAlign(LEFT, TOP);
+      text("Score: " + score, 16, 16);
+
+      textSize(14);
+      text("Mic: " + nf(vol, 1, 3), 16, 52);
+
+      fill(255);
+      rect(16, 74, 120, 12);
+      fill(50, 200, 50);
+      rect(16, 74, constrain(vol * 1500, 0, 120), 12);
+
+      textSize(14);
+      fill(0);
+      text("Glide", 16, 92);
+
+      fill(255);
+      rect(16, 110, 120, 12);
+      fill(255, 180, 50);
+      rect(16, 110, glideEnergy * 24, 12);
+
+      if (gameOver) {
+        fill(0, 180);
+        rect(0, 0, width, height);
+
+        fill(255);
+        textAlign(CENTER, CENTER);
+
+        textSize(42);
+        text("Game Over", width / 2, height / 2 - 40);
+
+        textSize(24);
+        text("Score: " + score, width / 2, height / 2 + 10);
+
+        textSize(18);
+        text("Press R to restart", width / 2, height / 2 + 50);
+      } else {
+        fill(0, 120);
+        rect(width - 190, 16, 170, 48, 8);
+
+        fill(255);
+        textAlign(CENTER, CENTER);
+        textSize(14);
+        text("Whistle / hum to rise", width - 105, 31);
+        text("Sustain sound to glide", width - 105, 49);
+      }
+    }
+
+    class Bird {
+      constructor() {
+        this.x = 100;
+        this.y = height / 2;
+        this.velocity = 0;
+        this.size = 28;
+      }
+
+      applyLift(amount) {
+        this.velocity -= amount;
+      }
+
+      update() {
+        this.velocity += GRAVITY;
+        this.velocity *= 0.95;
+        this.y += this.velocity;
+      }
+
+      show() {
+        push();
+        translate(this.x, this.y);
+        rotate(map(this.velocity, -8, 8, -0.6, 0.8, true));
+
+        noStroke();
+        fill(255, 230, 80);
+        ellipse(0, 0, this.size + 8, this.size);
+
+        fill(255, 200, 40);
+        ellipse(-4, 4, 14, 10);
+
+        fill(255);
+        ellipse(8, -4, 8, 8);
+        fill(0);
+        ellipse(9, -4, 3, 3);
+
+        fill(255, 140, 0);
+        triangle(14, 0, 24, -4, 24, 4);
+
+        pop();
+      }
+    }
+
+    class Pipe {
+      constructor() {
+        this.w = 70;
+        this.gap = random(170, 210);
+        this.top = random(80, height - 240);
+        this.x = width;
+        this.speed = 2.5;
+        this.passed = false;
+      }
+
+      update() {
+        this.x -= this.speed;
+      }
+
+      show() {
+        fill(70, 180, 70);
+        stroke(40, 120, 40);
+        strokeWeight(2);
+
+        rect(this.x, 0, this.w, this.top);
+
+        let bottomY = this.top + this.gap;
+        rect(this.x, bottomY, this.w, height - bottomY - 40);
+
+        rect(this.x - 4, this.top - 16, this.w + 8, 16);
+        rect(this.x - 4, bottomY, this.w + 8, 16);
+      }
+
+      hits(bird) {
+        let birdLeft = bird.x - bird.size / 2;
+        let birdRight = bird.x + bird.size / 2;
+        let birdTop = bird.y - bird.size / 2;
+        let birdBottom = bird.y + bird.size / 2;
+
+        let inPipeX = birdRight > this.x && birdLeft < this.x + this.w;
+        let hitsTop = birdTop < this.top;
+        let hitsBottom = birdBottom > this.top + this.gap;
+
+        return inPipeX && (hitsTop || hitsBottom);
+      }
+
+      offscreen() {
+        return this.x + this.w < 0;
+      }
+    }
+  </script>
+</body>
+</html>

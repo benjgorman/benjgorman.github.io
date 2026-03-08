@@ -50,7 +50,7 @@
   <div id="game-wrap">
     <div class="help">
       Click the game once, allow microphone access, then whistle / hum / make noise to rise.
-      Press <strong>R</strong> to restart.
+      Tap/click screen or Press <strong>R</strong> to restart.
     </div>
   </div>
 
@@ -84,6 +84,11 @@
       if (!started) {
         await startMic();
       }
+
+        // Restart if game over
+  if (gameOver) {
+    resetGame();
+  }
     }
 
     async function keyPressed() {
@@ -242,7 +247,7 @@
         text("Score: " + score, width / 2, height / 2 + 10);
 
         textSize(18);
-        text("Press R to restart", width / 2, height / 2 + 50);
+        text("Tap/click here or Press R to restart", width / 2, height / 2 + 50);
       } else {
         fill(0, 120);
         rect(width - 190, 16, 170, 48, 8);
@@ -343,5 +348,10 @@
       }
     }
   </script>
+  <div id="game-wrap">
+    <div class="help">
+      Idea from the mind of <a href="https://bengorman.com" target="_blank" style="color: #88f;">Ben</a>. Inspired by the original Flappy Bird. GPT did most of the code - for fun.
+    </div>
+  </div>
 </body>
 </html>
